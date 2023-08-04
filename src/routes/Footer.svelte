@@ -7,4 +7,7 @@
 </footer>
 
 <style>
+	footer {
+		margin-top: var(--spacing_xl4);
+	}
 </style>

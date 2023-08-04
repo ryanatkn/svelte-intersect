@@ -9,9 +9,9 @@
 		<header>
 			<h1>intersect.fuz.dev</h1>
 		</header>
-		<blockquote>
+		<p>
 			<a class="chip" href="https://github.com/fuz-dev/intersect">github.com/fuz-dev/intersect</a>
-		</blockquote>
+		</p>
 	</section>
 	<Demo />
 	<section>
@@ -36,6 +36,6 @@
 		}
 	}
 	section {
-		margin-bottom: var(--spacing_xl);
+		margin-bottom: var(--spacing_xl4);
 	}
 </style>
