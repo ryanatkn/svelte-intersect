@@ -2,7 +2,7 @@
   "name": "@fuz.dev/intersect",
   "description": "a Svelte action for IntersectionObserver",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "module",
   "homepage": "https://intersect.fuz.dev/",
   "repository": "https://github.com/fuz-dev/intersect",
