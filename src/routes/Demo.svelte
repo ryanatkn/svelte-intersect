@@ -11,9 +11,7 @@
 		<li
 			class="item box"
 			use:intersect={{
-				cb: (intersecting, el) => {
-					el.classList.toggle('strong', intersecting);
-				},
+				cb: (intersecting, el) => el.classList.toggle('strong', intersecting),
 				options: {threshold: 1},
 			}}
 		>
