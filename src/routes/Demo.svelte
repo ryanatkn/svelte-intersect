@@ -2,8 +2,6 @@
 	import {intersect} from '$lib/intersect';
 
 	const items = Array.from({length: 100}, (_, i) => i);
-
-	// TODO think about this module being in the library
 </script>
 
 <ul class="box">
