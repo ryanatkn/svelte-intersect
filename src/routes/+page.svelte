@@ -10,7 +10,8 @@
 			<h1>intersect.fuz.dev</h1>
 		</header>
 		<blockquote>
-			a Svelte action for <a
+			a <a href="https://svelte.dev/">Svelte</a> action for
+			<a
 				href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver"
 				>IntersectionObserver</a
 			>
