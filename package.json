@@ -1,5 +1,5 @@
 {
-  "name": "@fuz-dev/intersect",
+  "name": "@fuz.dev/intersect",
   "description": "a Svelte action for IntersectionObserver",
   "license": "MIT",
   "version": "0.0.1",
