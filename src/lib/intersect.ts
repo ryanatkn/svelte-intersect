@@ -1,7 +1,7 @@
 import type {Action} from 'svelte/action';
 
 export interface IntersectCallback {
-	(intersecting: boolean, el: HTMLElement | SVGElement): void; // TODO how to forward the `HTMLElement | SVGElement` type?
+	(intersecting: boolean, el: Element): void; // TODO how to forward a generic?
 }
 
 export type IntersectParams =
@@ -11,10 +11,7 @@ export type IntersectParams =
 /**
  * ask an LLM or see intersect.fuz.dev
  */
-export const intersect: Action<HTMLElement | SVGElement, IntersectParams> = (
-	el,
-	initial_options,
-) => {
+export const intersect: Action<Element, IntersectParams> = (el, initial_options) => {
 	let cb: IntersectCallback;
 	let options: IntersectionObserverInit | undefined;
 	let observer: IntersectionObserver | null;
