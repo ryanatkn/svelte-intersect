@@ -8,7 +8,7 @@ export type IntersectParams =
 	| IntersectCallback
 	| {cb: IntersectCallback; options: IntersectionObserverInit};
 
-export const intersect: Action<Element, IntersectParams> = (el, initial) => {
+export const intersect: Action<Element, IntersectParams> = (el, initial_options) => {
 	let cb: IntersectCallback;
 	let options: IntersectionObserverInit | undefined;
 	let observer: IntersectionObserver | null;
@@ -35,14 +35,14 @@ export const intersect: Action<Element, IntersectParams> = (el, initial) => {
 		observer.observe(el);
 	};
 
-	update(initial);
+	update(initial_options);
 	observe();
 
 	return {
 		update: (params) => {
-			const prev = options;
+			const prev_options = options;
 			update(params);
-			if (!equal(prev, options)) {
+			if (!options_equal(prev_options, options)) {
 				observe();
 			}
 		},
@@ -50,7 +50,7 @@ export const intersect: Action<Element, IntersectParams> = (el, initial) => {
 	};
 };
 
-const equal = (
+const options_equal = (
 	a: IntersectionObserverInit | undefined,
 	b: IntersectionObserverInit | undefined,
 ): boolean => {
