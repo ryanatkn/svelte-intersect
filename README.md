@@ -5,7 +5,7 @@
 
 demo: [intersect.fuz.dev](https://intersect.fuz.dev/)
 
-npm: [npmjs.com/package/@fuz.dev/intersect](https://www.npmjs.com/package/@fuz.dev/intersect):
+npm: [npmjs.com/package/@fuz.dev/intersect](https://www.npmjs.com/package/@fuz.dev/intersect)
 
 ```bash
 npm i -D @fuz.dev/intersect
