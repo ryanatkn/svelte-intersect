@@ -26,13 +26,22 @@
 </svelte:head>
 
 <svelte:body
-	use:contextmenu.action={{
-		content: 'Settings',
-		icon: '?',
-		run: () => {
-			showSettings = true;
+	use:contextmenu.action={[
+		{
+			content: 'Settings',
+			icon: '?',
+			run: () => {
+				showSettings = true;
+			},
 		},
-	}}
+		{
+			content: 'Reload',
+			icon: '⟳', // ↻
+			run: () => {
+				location.reload();
+			},
+		},
+	]}
 />
 
 <Themed>
