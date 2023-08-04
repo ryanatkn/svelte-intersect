@@ -1,28 +1,12 @@
-<script lang="ts">
-	import Alert from '@feltjs/felt-ui/Alert.svelte';
-	import {base} from '$app/paths';
-
-	import Header from '$routes/Header.svelte';
-	import Mreows from '$routes/Mreows.svelte';
-
-	let mreows: Array<{icon: string}> | undefined;
-</script>
-
-<main class="prose">
-	<section class="box">
-		<Header />
-		<Alert>
-			<span slot="icon"
-				>{#if mreows}{mreows[0].icon}{:else}✨{/if}</span
-			><span
-				>hello, welcome to <a href="https://github.com/feltjs/felt-template">felt-template</a></span
-			>
-		</Alert>
+<main class="box">
+	<section class="prose text_align_center">
+		<header>
+			<h1>intersect.fuz.dev</h1>
+		</header>
 		<p>
-			here's an <a href="{base}/route">example route</a>
+			<a class="chip" href="https://github.com/fuz-dev/intersect">github.com/fuz-dev/intersect</a>
 		</p>
 	</section>
-	<Mreows bind:mreows />
 </main>
 
 <style>
@@ -31,5 +15,17 @@
 		flex-direction: column;
 		align-items: center;
 		margin: 0 auto;
+	}
+	h1 {
+		text-align: center;
+	}
+	/* TODO upstream */
+	@media (max-width: 440px) {
+		h1 {
+			font-size: var(--size_xl2);
+		}
+	}
+	section {
+		margin-bottom: var(--spacing_xl);
 	}
 </style>

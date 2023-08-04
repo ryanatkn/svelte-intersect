@@ -22,7 +22,7 @@
 </script>
 
 <svelte:head>
-	<title>felt-template</title>
+	<title>intersect.fuz.dev</title>
 </svelte:head>
 
 <svelte:body
