@@ -31,9 +31,12 @@
 	.item {
 		width: 100%;
 		padding: var(--spacing_xl);
+		background-color: hsla(var(--hue_7), 50%, 80%, 0.3);
+		font-weight: 900;
+		transition: background-color var(--duration_2);
 	}
 	.item:global(.strong) {
-		font-weight: 900;
-		background-color: var(--fg_1);
+		color: var(--color_6);
+		background-color: hsla(var(--hue_6), 50%, 80%, 0.15);
 	}
 </style>

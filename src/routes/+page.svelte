@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Footer from './Footer.svelte';
+
 	import Demo from '$routes/Demo.svelte';
 </script>
 
@@ -7,11 +9,14 @@
 		<header>
 			<h1>intersect.fuz.dev</h1>
 		</header>
-		<p>
+		<blockquote>
 			<a class="chip" href="https://github.com/fuz-dev/intersect">github.com/fuz-dev/intersect</a>
-		</p>
+		</blockquote>
 	</section>
 	<Demo />
+	<section>
+		<Footer />
+	</section>
 </main>
 
 <style>
