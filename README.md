@@ -34,7 +34,7 @@ With `options` forwarded to the
 ```
 
 For more see the
-[IntersectionObserver docs on MDN](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver)
-and [the demo at intersect.fuz.dev](https://intersect.fuz.dev/).
+[IntersectionObserver docs](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver) on MDN
+and the demo at [intersect.fuz.dev](https://intersect.fuz.dev/).
 
 License: [MIT](LICENSE)
