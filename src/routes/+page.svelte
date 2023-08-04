@@ -1,3 +1,7 @@
+<script lang="ts">
+	import Demo from '$routes/Demo.svelte';
+</script>
+
 <main class="box">
 	<section class="prose text_align_center">
 		<header>
@@ -7,6 +11,7 @@
 			<a class="chip" href="https://github.com/fuz-dev/intersect">github.com/fuz-dev/intersect</a>
 		</p>
 	</section>
+	<Demo />
 </main>
 
 <style>
