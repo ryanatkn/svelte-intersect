@@ -1,6 +1,5 @@
 <script lang="ts">
-	import Footer from './Footer.svelte';
-
+	import Footer from '$routes/Footer.svelte';
 	import Demo from '$routes/Demo.svelte';
 </script>
 
