@@ -11,7 +11,7 @@
 		<li
 			class="item box"
 			use:intersect={{
-				cb: (intersecting, el) => el.classList.toggle('strong', intersecting),
+				cb: (intersecting, el) => el.classList.toggle('intersecting', intersecting),
 				options: {threshold: 1},
 			}}
 		>
@@ -33,7 +33,7 @@
 		font-weight: 900;
 		transition: background-color var(--duration_2);
 	}
-	.item:global(.strong) {
+	.item:global(.intersecting) {
 		color: var(--color_6);
 		background-color: hsla(var(--hue_6), 50%, 80%, 0.15);
 	}
