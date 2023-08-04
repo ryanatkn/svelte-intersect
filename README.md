@@ -21,7 +21,8 @@ Your callback gets called when the element enters or leaves the viewport:
 <div use:intersect={(intersecting, el) => /* ... */}>
 ```
 
-with options:
+With `options` forwarded to the
+[`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver):
 
 ```svelte
 <div
