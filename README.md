@@ -31,3 +31,5 @@ with options:
 For more see the
 [IntersectionObserver docs on MDN](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver)
 and [the demo at intersect.fuz.dev](https://intersect.fuz.dev/).
+
+License: [MIT](LICENSE)
