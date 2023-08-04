@@ -8,6 +8,9 @@ export type IntersectParams =
 	| IntersectCallback
 	| {cb: IntersectCallback; options?: IntersectionObserverInit};
 
+/**
+ * ask an LLM or see intersect.fuz.dev
+ */
 export const intersect: Action<HTMLElement | SVGElement, IntersectParams> = (
 	el,
 	initial_options,
