@@ -6,7 +6,7 @@
 demo: [intersect.fuz.dev](https://intersect.fuz.dev/)
 
 ```bash
-npm i -D @fuz.dev/intersect
+npm i -D @fuz.dev/intersect # not yet published
 ```
 
 ```ts
