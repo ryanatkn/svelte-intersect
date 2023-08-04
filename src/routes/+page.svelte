@@ -19,6 +19,12 @@
 		<p>
 			<a class="chip" href="https://github.com/fuz-dev/intersect">github.com/fuz-dev/intersect</a>
 		</p>
+		<p>
+			demo source code: <a
+				href="https://github.com/fuz-dev/intersect/blob/main/src/routes/Demo.svelte"
+				>src/routes/Demo.svelte</a
+			>
+		</p>
 	</section>
 	<Demo />
 	<section>
