@@ -17,14 +17,16 @@
 			>
 		</blockquote>
 		<p>
-			<a class="chip" href="https://github.com/fuz-dev/intersect">github.com/fuz-dev/intersect</a>
+			<a class="chip" href="https://github.com/fuz-dev/intersect">GitHub</a>
+			<a class="chip" href="https://www.npmjs.com/package/@fuz.dev/intersect">npm</a>
+			<a class="chip" href="https://www.fuz.dev">fuz.dev</a>
 		</p>
-		<p>
+		<blockquote>
 			demo source code: <a
 				href="https://github.com/fuz-dev/intersect/blob/main/src/routes/Demo.svelte"
 				>src/routes/Demo.svelte</a
 			>
-		</p>
+		</blockquote>
 	</section>
 	<Demo />
 	<section>
