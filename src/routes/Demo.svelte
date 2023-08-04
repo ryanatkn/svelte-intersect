@@ -43,4 +43,7 @@
 		color: var(--color_6);
 		background-color: hsla(var(--hue_6), 50%, 80%, 0.15);
 	}
+	input {
+		width: var(--input_width_min);
+	}
 </style>
