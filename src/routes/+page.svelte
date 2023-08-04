@@ -6,7 +6,7 @@
 <main class="box">
 	<section class="prose text_align_center">
 		<header>
-			<h1>intersect.fuz.dev</h1>
+			<h1>@fuz.dev/intersect</h1>
 		</header>
 		<blockquote>
 			a <a href="https://svelte.dev/">Svelte</a> action for
