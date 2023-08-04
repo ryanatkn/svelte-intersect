@@ -9,6 +9,12 @@
 		<header>
 			<h1>intersect.fuz.dev</h1>
 		</header>
+		<blockquote>
+			a Svelte action for <a
+				href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver"
+				>IntersectionObserver</a
+			>
+		</blockquote>
 		<p>
 			<a class="chip" href="https://github.com/fuz-dev/intersect">github.com/fuz-dev/intersect</a>
 		</p>
