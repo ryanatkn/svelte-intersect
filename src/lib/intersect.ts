@@ -1,14 +1,17 @@
 import type {Action} from 'svelte/action';
 
 export interface IntersectCallback {
-	(visible: boolean, el: Element): void; // TODO how to forward the `Element` type?
+	(visible: boolean, el: HTMLElement | SVGElement): void; // TODO how to forward the `HTMLElement | SVGElement` type?
 }
 
 export type IntersectParams =
 	| IntersectCallback
 	| {cb: IntersectCallback; options: IntersectionObserverInit};
 
-export const intersect: Action<Element, IntersectParams> = (el, initial_options) => {
+export const intersect: Action<HTMLElement | SVGElement, IntersectParams> = (
+	el,
+	initial_options,
+) => {
 	let cb: IntersectCallback;
 	let options: IntersectionObserverInit | undefined;
 	let observer: IntersectionObserver | null;
