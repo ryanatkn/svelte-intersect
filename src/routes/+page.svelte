@@ -27,7 +27,10 @@
 			>
 		</blockquote>
 	</section>
-	<Demo />
+	<div class="box row">
+		<Demo threshold={0} />
+		<Demo threshold={1} />
+	</div>
 	<section>
 		<Footer />
 	</section>
