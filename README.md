@@ -47,6 +47,6 @@ todos
 - look more into making the `el` type generic
 - change to `svelte-kit package`
 - change to changesets
-- maybe don't use a table for the API
+- maybe don't use a table for the API docs, `Library`?
 
 License: [MIT](LICENSE)
