@@ -1,7 +1,7 @@
 <script lang="ts">
 	import {intersect} from '$lib/intersect';
 
-	export let threshold = 1;
+	export let threshold = 0;
 	export let count = -1;
 
 	export let items_count = 100;

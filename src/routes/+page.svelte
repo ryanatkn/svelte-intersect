@@ -28,8 +28,9 @@
 		</blockquote>
 	</section>
 	<div class="demos">
-		<Demo threshold={0} />
+		<Demo />
 		<Demo threshold={1} />
+		<Demo count={1} />
 	</div>
 	<section>
 		<Footer />
