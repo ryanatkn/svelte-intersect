@@ -4,9 +4,14 @@ export interface IntersectCallback {
 	(intersecting: boolean, el: HTMLElement | SVGElement): void; // TODO how to forward a generic?
 }
 
-export type IntersectParams =
-	| IntersectCallback
-	| {cb: IntersectCallback; once?: boolean; options?: IntersectionObserverInit};
+// TODO name, `IntersectParamsOptions` isn't great
+export interface IntersectParamsOptions {
+	cb: IntersectCallback;
+	count?: number;
+	options?: IntersectionObserverInit;
+}
+
+export type IntersectParams = IntersectCallback | IntersectParamsOptions;
 
 /**
  * ask an LLM or see intersect.fuz.dev
@@ -16,19 +21,22 @@ export const intersect: Action<HTMLElement | SVGElement, IntersectParams> = (
 	initial_params,
 ) => {
 	let cb: IntersectCallback;
-	let once = false;
+	let count: number | undefined;
 	let options: IntersectionObserverInit | undefined;
 	let observer: IntersectionObserver | null;
-	let intersected = false;
+	let intersections: number;
+
+	// what about not firing on the `!intersecting`? it's weird that it will fire false sometimes twice, sometimes once
 
 	const update = (params: IntersectParams): void => {
+		intersections = 0;
 		if (typeof params === 'function') {
 			cb = params;
-			once = false;
+			count = undefined;
 			options = undefined;
 		} else {
 			cb = params.cb;
-			once = params.once ?? false;
+			count = params.count;
 			options = params.options;
 		}
 	};
@@ -40,12 +48,14 @@ export const intersect: Action<HTMLElement | SVGElement, IntersectParams> = (
 	const observe = (): void => {
 		if (observer) cleanup();
 		observer = new IntersectionObserver((entries) => {
-			const {isIntersecting} = entries[0];
-			cb(isIntersecting, el);
-			if (!intersected && isIntersecting) {
-				intersected = true;
+			const intersecting = entries[0].isIntersecting;
+			console.log(`isIntersecting`, intersecting);
+			cb(intersecting, el);
+			if (intersecting) {
+				intersections++;
 			}
-			if (once && intersected && !isIntersecting) {
+			// when leaving the viewport, check if it's done
+			if (!intersecting && count && intersections >= count) {
 				console.log('CLEANED UP DONE');
 				cleanup();
 			}
@@ -58,10 +68,11 @@ export const intersect: Action<HTMLElement | SVGElement, IntersectParams> = (
 
 	return {
 		update: (params) => {
-			const prev_once = once; // I think resetting on this condition is the better UX?
+			// diff to see if we need to re-recreate the IntersectionObserver
+			const prev_count = count; // I think resetting on this condition is the better UX?
 			const prev_options = options;
 			update(params);
-			if (prev_once !== once || !options_equal(prev_options, options)) {
+			if (prev_count !== count || !options_equal(prev_options, options)) {
 				observe();
 			}
 		},
