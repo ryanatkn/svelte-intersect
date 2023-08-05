@@ -1,66 +1,73 @@
 import type {Action} from 'svelte/action';
 
 export interface IntersectCallback {
-	(intersecting: boolean, el: HTMLElement | SVGElement): void; // TODO how to forward a generic?
+	(intersecting: boolean, el: HTMLElement | SVGElement, disconnect: () => void): void; // TODO how to forward a generic?
 }
 
-export type IntersectParams =
-	| IntersectCallback
-	| {cb: IntersectCallback; options?: IntersectionObserverInit};
+export interface IntersectParams {
+	cb: IntersectCallback;
+	count?: number;
+	options?: IntersectionObserverInit;
+}
+
+export type IntersectParamsOrCallback = IntersectCallback | IntersectParams;
 
 /**
  * ask an LLM or see intersect.fuz.dev
  */
-export const intersect: Action<HTMLElement | SVGElement, IntersectParams> = (
+export const intersect: Action<HTMLElement | SVGElement, IntersectParamsOrCallback> = (
 	el,
-	initial_options,
+	initial_params,
 ) => {
 	let cb: IntersectCallback;
+	let count: number | undefined;
 	let options: IntersectionObserverInit | undefined;
 	let observer: IntersectionObserver | null;
+	let intersections: number;
 
-	const update = (params: IntersectParams): void => {
+	// what about not firing on the `!intersecting`? it's weird that it will fire false sometimes twice, sometimes once
+
+	const set_params = (params: IntersectParamsOrCallback): void => {
+		intersections = 0;
 		if (typeof params === 'function') {
 			cb = params;
+			count = undefined;
 			options = undefined;
 		} else {
 			cb = params.cb;
+			count = params.count;
 			options = params.options;
 		}
 	};
-	const cleanup = (): void => {
+	const disconnect = (): void => {
 		if (!observer) return;
 		observer.disconnect();
 		observer = null;
 	};
 	const observe = (): void => {
-		if (observer) cleanup();
+		if (observer) disconnect();
 		observer = new IntersectionObserver((entries) => {
-			cb(entries[0].isIntersecting, el);
+			const intersecting = entries[0].isIntersecting;
+			cb(intersecting, el, disconnect);
+			if (intersecting) {
+				intersections++;
+			}
+			// when leaving the viewport, check if it's done
+			if (!intersecting && count && intersections >= count) {
+				disconnect();
+			}
 		}, options);
 		observer.observe(el);
 	};
 
-	update(initial_options);
+	set_params(initial_params);
 	observe();
 
 	return {
 		update: (params) => {
-			const prev_options = options;
-			update(params);
-			if (!options_equal(prev_options, options)) {
-				observe();
-			}
+			set_params(params);
+			observe();
 		},
-		destroy: cleanup,
+		destroy: disconnect,
 	};
-};
-
-const options_equal = (
-	a: IntersectionObserverInit | undefined,
-	b: IntersectionObserverInit | undefined,
-): boolean => {
-	if (a === b) return true;
-	if (!a || !b) return false;
-	return a.root === b.root && a.rootMargin === b.rootMargin && a.threshold === b.threshold;
 };

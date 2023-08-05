@@ -27,7 +27,7 @@
 			>
 		</blockquote>
 	</section>
-	<div class="box row">
+	<div class="demos">
 		<Demo threshold={0} />
 		<Demo threshold={1} />
 	</div>
@@ -54,5 +54,9 @@
 	}
 	section {
 		margin-bottom: var(--spacing_xl4);
+	}
+	.demos {
+		display: flex;
+		gap: var(--spacing_lg);
 	}
 </style>
