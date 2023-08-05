@@ -6,6 +6,11 @@ export interface IntersectCallback {
 
 export interface IntersectParams {
 	cb: IntersectCallback;
+	/**
+	 * A value of 0 disables the callback,
+	 * less than 0 or undefined makes the callback get called every time,
+	 * and greater than 1 disconnects after being triggered that many times.
+	 */
 	count?: number;
 	options?: IntersectionObserverInit;
 }
