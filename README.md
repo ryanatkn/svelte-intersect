@@ -19,14 +19,14 @@ import {intersect} from '@fuz.dev/intersect';
 that calls your callback when `el` enters or leaves the viewport:
 
 ```svelte
-<div use:intersect={(intersecting, el) => /* ... */}>
+<div use:intersect={(intersecting, el, disconnect) => /* ... */}>
 ```
 
 Pass `count: 1` to disconnect after `el` enters and leaves the viewport 1 time, similar to 'once':
 
 ```svelte
 <div use:intersect={{
-	cb: (intersecting, el) => /* ... */,
+	cb: (intersecting, el, disconnect) => /* ... */,
 	count: 1, // disable with `undefined` or `0`
 }}>
 ```
@@ -37,7 +37,7 @@ With `options` forwarded to the
 ```svelte
 <div
 	use:intersect={{
-		cb: (intersecting, el) => /* ... */,
+		cb: (intersecting, el, disconnect) => /* ... */,
 		options: {threshold: 1}, // also `root` and `rootMargin`
 	}}
 >
