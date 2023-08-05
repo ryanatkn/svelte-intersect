@@ -6,7 +6,7 @@ export interface IntersectCallback {
 
 export interface IntersectParams {
 	/**
-	 * Called when the element enters or leaves teh viewport.
+	 * Called when the element enters or leaves the viewport.
 	 */
 	cb: IntersectCallback;
 	/**
