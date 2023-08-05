@@ -22,7 +22,7 @@ that calls your callback when `el` enters or leaves the viewport:
 <div use:intersect={(intersecting, el, disconnect) => /* ... */}>
 ```
 
-You can also pass an object with options:
+For more complex behavior:
 
 | property  | default     | description                                                                                                                                 |
 | --------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
