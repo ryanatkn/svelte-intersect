@@ -26,7 +26,7 @@ Pass `count: 1` to disconnect after `el` enters and leaves the viewport 1 time, 
 
 ```svelte
 <div use:intersect={{
-	cb: (intersecting, el, disconnect) => /* ... */,
+	cb: /* ... */,
 	count: 1, // disable with `undefined` or `0`
 }}>
 ```
@@ -35,12 +35,10 @@ With `options` forwarded to the
 [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver):
 
 ```svelte
-<div
-	use:intersect={{
-		cb: (intersecting, el, disconnect) => /* ... */,
-		options: {threshold: 1}, // also `root` and `rootMargin`
-	}}
->
+<div use:intersect={{
+	cb: /* ... */,
+	options: {threshold: 1}, // also `root` and `rootMargin`
+}}>
 ```
 
 For more see the
