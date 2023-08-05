@@ -15,6 +15,9 @@ export interface IntersectParams {
 	 * and greater than 1 disconnects after being triggered that many times.
 	 */
 	count?: number;
+	/**
+	 * Same as the `options` param to `IntersectionObserver`.
+	 */
 	options?: IntersectionObserverInit;
 }
 
