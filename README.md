@@ -46,5 +46,6 @@ todos
 
 - change to `svelte-kit package`
 - change to changesets
+- maybe don't use a table for the API
 
 License: [MIT](LICENSE)
