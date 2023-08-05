@@ -37,7 +37,7 @@ With `options` forwarded to the
 <div
 	use:intersect={{
 		cb: (intersecting, el) => /* ... */,
-		options: {threshold: 1},
+		options: {threshold: 1}, // also `root` and `rootMargin`
 	}}
 >
 ```
