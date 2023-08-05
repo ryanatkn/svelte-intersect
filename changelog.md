@@ -1,5 +1,10 @@
 # changelog
 
+## 0.1.2
+
+- add support for `count` param option to get behavior like `once`
+  ([#2](https://github.com/fuz-dev/intersect/pull/2))
+
 ## 0.1.1
 
 - bump for npm readme
