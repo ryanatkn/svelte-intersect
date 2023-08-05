@@ -5,8 +5,19 @@ export interface IntersectCallback {
 }
 
 export interface IntersectParams {
+	/**
+	 * Called when the element enters or leaves the viewport.
+	 */
 	cb: IntersectCallback;
+	/**
+	 * A value of 0 disables the callback,
+	 * less than 0 or undefined makes the callback get called every time,
+	 * and greater than 1 disconnects after being triggered that many times.
+	 */
 	count?: number;
+	/**
+	 * Same as the `options` param to `IntersectionObserver`.
+	 */
 	options?: IntersectionObserverInit;
 }
 
@@ -42,6 +53,7 @@ export const intersect: Action<HTMLElement | SVGElement, IntersectParamsOrCallba
 	};
 	const observe = (): void => {
 		if (observer) disconnect();
+		if (count === 0) return; // disable when `count` is `0`, no need to create the observer
 		observer = new IntersectionObserver((entries) => {
 			const intersecting = entries[0].isIntersecting;
 			cb(intersecting, el, disconnect);
@@ -50,7 +62,7 @@ export const intersect: Action<HTMLElement | SVGElement, IntersectParamsOrCallba
 				intersections++;
 			} else {
 				// when leaving the viewport, check if it's done
-				if (count && intersections >= count) {
+				if (count && count > 0 && intersections >= count) {
 					disconnect();
 				}
 			}

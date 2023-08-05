@@ -1,5 +1,11 @@
 # changelog
 
+## 0.2.0
+
+- **break**: change `count` behavior where `0` disables the trigger completely,
+  and less than `0` or `undefined` is infinite
+  ([#3](https://github.com/fuz-dev/intersect/pull/3))
+
 ## 0.1.4
 
 - readme
