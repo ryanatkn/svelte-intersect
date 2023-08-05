@@ -10,11 +10,8 @@
 </script>
 
 <div class="demo">
-	<label
-		class="box"
-		title="A `threshold` of 0 triggers the event when the element is onscreen at least a pixel, and a value of 1 triggers the event when it is fully onscreen."
-	>
-		<div class="title"><code>threshold</code></div>
+	<label class="box" title="IntersectionObserver options.threshold">
+		<div class="title"><code>options.threshold</code></div>
 		<div class="threshold">
 			<input type="number" step={0.1} min={0} max={1} bind:value={threshold} />
 			<input type="range" step={0.1} min={0} max={1} bind:value={threshold} />
@@ -22,7 +19,7 @@
 	</label>
 	<label
 		class="box"
-		title="A `count` of 1 disconnects the observer after the element enters and leaves the viewport 1 time, similar to 'once'."
+		title="disconnect the observer after the element enters and leaves the viewport this many times"
 	>
 		<div class="title"><code>count</code></div>
 		<div class="count">
