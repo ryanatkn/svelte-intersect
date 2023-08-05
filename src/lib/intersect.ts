@@ -5,6 +5,9 @@ export interface IntersectCallback {
 }
 
 export interface IntersectParams {
+	/**
+	 * Called when the element intersection state changes.
+	 */
 	cb: IntersectCallback;
 	/**
 	 * A value of 0 disables the callback,
