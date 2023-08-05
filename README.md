@@ -15,7 +15,8 @@ npm i -D @fuz.dev/intersect
 import {intersect} from '@fuz.dev/intersect';
 ```
 
-Your callback is called when `el` enters or leaves the viewport:
+`intersect` is a [Svelte action](https://svelte.dev/docs/svelte-action)
+that calls your callback is called when `el` enters or leaves the viewport:
 
 ```svelte
 <div use:intersect={(intersecting, el) => /* ... */}>
