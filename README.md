@@ -22,22 +22,16 @@ that calls your callback when `el` enters or leaves the viewport:
 <div use:intersect={(intersecting, el, disconnect) => /* ... */}>
 ```
 
-Pass `count: 1` to disconnect after `el` enters and leaves the viewport 1 time, similar to 'once' for an event:
+| property  | description                                                                                                                           |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `count`   | pass `1` to disconnect after `el` enters and leaves the viewport one time, similar to 'once' for an event                             |
+| `options` | forwarded to the [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver) |
 
 ```svelte
 <div use:intersect={{
-	cb: (intersecting, el, disconnect) => /* ... */,
-	count: 1, // disable with `undefined` or `0`
-}}>
-```
-
-With `options` forwarded to the
-[`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver):
-
-```svelte
-<div use:intersect={{
-	cb: (intersecting, el, disconnect) => /* ... */,
-	options: {threshold: 1}, // also `root` and `rootMargin`
+  cb: (intersecting, el, disconnect) => /* ... */,
+  count: 1, // disable with `undefined` or `0`, defaults to `0`
+  options: {threshold, root, rootMagin},
 }}>
 ```
 
