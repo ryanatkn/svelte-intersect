@@ -42,6 +42,7 @@ export const intersect: Action<HTMLElement | SVGElement, IntersectParamsOrCallba
 	};
 	const observe = (): void => {
 		if (observer) disconnect();
+		if (count === 0) return; // disable when `count` is `0`, no need to create the observer
 		observer = new IntersectionObserver((entries) => {
 			const intersecting = entries[0].isIntersecting;
 			cb(intersecting, el, disconnect);
@@ -50,7 +51,7 @@ export const intersect: Action<HTMLElement | SVGElement, IntersectParamsOrCallba
 				intersections++;
 			} else {
 				// when leaving the viewport, check if it's done
-				if (count && intersections >= count) {
+				if (count && count > 0 && intersections >= count) {
 					disconnect();
 				}
 			}

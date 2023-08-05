@@ -2,7 +2,7 @@
 	import {intersect} from '$lib/intersect';
 
 	export let threshold = 1;
-	export let count = 0;
+	export let count = -1;
 
 	export let items_count = 100;
 
@@ -26,8 +26,8 @@
 	>
 		<div class="title"><code>count</code></div>
 		<div class="count">
-			<input type="number" min={0} max={3} step={1} bind:value={count} />
-			<input type="range" min={0} max={3} step={1} bind:value={count} />
+			<input type="number" min={-1} max={3} step={1} bind:value={count} />
+			<input type="range" min={-1} max={3} step={1} bind:value={count} />
 		</div>
 	</label>
 	<ul class="box">
