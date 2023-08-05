@@ -47,4 +47,9 @@ For more see the
 [IntersectionObserver docs](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver) on MDN
 and the demo at [intersect.fuz.dev](https://intersect.fuz.dev/).
 
+todos
+
+- change to `svelte-kit package`
+- change to changesets
+
 License: [MIT](LICENSE)

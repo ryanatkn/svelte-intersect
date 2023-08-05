@@ -20,10 +20,8 @@ export const intersect: Action<HTMLElement | SVGElement, IntersectParamsOrCallba
 	let cb: IntersectCallback;
 	let count: number | undefined;
 	let options: IntersectionObserverInit | undefined;
-	let observer: IntersectionObserver | null;
 	let intersections: number;
-
-	// what about not firing on the `!intersecting`? it's weird that it will fire false sometimes twice, sometimes once
+	let observer: IntersectionObserver | null;
 
 	const set_params = (params: IntersectParamsOrCallback): void => {
 		intersections = 0;
@@ -48,11 +46,13 @@ export const intersect: Action<HTMLElement | SVGElement, IntersectParamsOrCallba
 			const intersecting = entries[0].isIntersecting;
 			cb(intersecting, el, disconnect);
 			if (intersecting) {
+				// track each the count of times it enters the viewport
 				intersections++;
-			}
-			// when leaving the viewport, check if it's done
-			if (!intersecting && count && intersections >= count) {
-				disconnect();
+			} else {
+				// when leaving the viewport, check if it's done
+				if (count && intersections >= count) {
+					disconnect();
+				}
 			}
 		}, options);
 		observer.observe(el);
