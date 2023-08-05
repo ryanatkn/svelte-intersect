@@ -4,7 +4,7 @@
 	export let threshold = 1;
 	export let count = 0;
 
-	export let items_count = 50;
+	export let items_count = 100;
 
 	$: items = Array.from({length: items_count}, (_, i) => i);
 </script>

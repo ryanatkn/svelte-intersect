@@ -65,23 +65,9 @@ export const intersect: Action<HTMLElement | SVGElement, IntersectParamsOrCallba
 
 	return {
 		update: (params) => {
-			// diff to see if we need to re-recreate the IntersectionObserver
-			const prev_count = count; // I think resetting on this condition is the better UX?
-			const prev_options = options;
 			set_params(params);
-			if (!!prev_count !== !!count || !options_equal(prev_options, options)) {
-				observe();
-			}
+			observe();
 		},
 		destroy: disconnect,
 	};
-};
-
-const options_equal = (
-	a: IntersectionObserverInit | undefined,
-	b: IntersectionObserverInit | undefined,
-): boolean => {
-	if (a === b) return true;
-	if (!a || !b) return false;
-	return a.root === b.root && a.rootMargin === b.rootMargin && a.threshold === b.threshold;
 };
