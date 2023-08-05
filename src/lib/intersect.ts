@@ -4,19 +4,18 @@ export interface IntersectCallback {
 	(intersecting: boolean, el: HTMLElement | SVGElement, disconnect: () => void): void; // TODO how to forward a generic?
 }
 
-// TODO name, `IntersectParamsOptions` isn't great
-export interface IntersectParamsOptions {
+export interface IntersectParams {
 	cb: IntersectCallback;
-	count?: number; // TODO BLOCK maybe instead of this api, `dispose` or `destroy`?
+	count?: number;
 	options?: IntersectionObserverInit;
 }
 
-export type IntersectParams = IntersectCallback | IntersectParamsOptions;
+export type IntersectParamsOrCallback = IntersectCallback | IntersectParams;
 
 /**
  * ask an LLM or see intersect.fuz.dev
  */
-export const intersect: Action<HTMLElement | SVGElement, IntersectParams> = (
+export const intersect: Action<HTMLElement | SVGElement, IntersectParamsOrCallback> = (
 	el,
 	initial_params,
 ) => {
@@ -28,7 +27,7 @@ export const intersect: Action<HTMLElement | SVGElement, IntersectParams> = (
 
 	// what about not firing on the `!intersecting`? it's weird that it will fire false sometimes twice, sometimes once
 
-	const set_params = (params: IntersectParams): void => {
+	const set_params = (params: IntersectParamsOrCallback): void => {
 		intersections = 0;
 		if (typeof params === 'function') {
 			cb = params;
@@ -49,14 +48,12 @@ export const intersect: Action<HTMLElement | SVGElement, IntersectParams> = (
 		if (observer) disconnect();
 		observer = new IntersectionObserver((entries) => {
 			const intersecting = entries[0].isIntersecting;
-			console.log(`isIntersecting`, intersecting);
 			cb(intersecting, el, disconnect);
 			if (intersecting) {
 				intersections++;
 			}
 			// when leaving the viewport, check if it's done
 			if (!intersecting && count && intersections >= count) {
-				console.log('CLEANED UP DONE');
 				disconnect();
 			}
 		}, options);
@@ -72,7 +69,7 @@ export const intersect: Action<HTMLElement | SVGElement, IntersectParams> = (
 			const prev_count = count; // I think resetting on this condition is the better UX?
 			const prev_options = options;
 			set_params(params);
-			if (prev_count !== count || !options_equal(prev_options, options)) {
+			if (!!prev_count !== !!count || !options_equal(prev_options, options)) {
 				observe();
 			}
 		},

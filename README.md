@@ -21,12 +21,12 @@ Your callback is called when `el` enters or leaves the viewport:
 <div use:intersect={(intersecting, el) => /* ... */}>
 ```
 
-Pass `once: true` to call your callback only when `el` first enters and leaves the viewport:
+Pass `count: 1` to disconnect after `el` enters and leaves the viewport 1 time, similar to 'once':
 
 ```svelte
 <div use:intersect={{
 	cb: (intersecting, el) => /* ... */,
-	once: true,
+	count: 1, // disable with `undefined` or `0`
 }}>
 ```
 
