@@ -49,12 +49,12 @@
 				<p>
 					A <code>count</code> of <code>0</code> makes the callback never trigger.
 				</p>
-				<blockquote>
+				<p>
 					Demo source code: <a
 						href="https://github.com/fuz-dev/intersect/blob/main/src/routes/Demo.svelte"
 						>src/routes/Demo.svelte</a
 					>
-				</blockquote>
+				</p>
 			</details>
 		</div>
 		<div class="demos">
