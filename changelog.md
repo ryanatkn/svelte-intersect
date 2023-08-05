@@ -4,6 +4,8 @@
 
 - add support for `count` param option to get behavior like `once`
   ([#2](https://github.com/fuz-dev/intersect/pull/2))
+- include `disconnect` as an arg to `cb`
+  ([#2](https://github.com/fuz-dev/intersect/pull/2))
 
 ## 0.1.1
 
