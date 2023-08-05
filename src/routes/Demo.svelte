@@ -4,12 +4,17 @@
 	const items = Array.from({length: 100}, (_, i) => i);
 
 	export let threshold = 1;
+	export let once = false;
 </script>
 
 <div class="demo">
-	<label class="box">
+	<label class="box spaced">
+		<div class="title">once</div>
+		<input type="checkbox" bind:checked={once} />
+	</label>
+	<label class="box spaced">
 		<div class="title">threshold</div>
-		<input type="number" step="0.1" min={0} max={1} bind:value={threshold} />
+		<input class="threshold" type="number" step="0.1" min={0} max={1} bind:value={threshold} />
 	</label>
 	<ul class="box">
 		{#each items as item}
@@ -17,6 +22,7 @@
 				class="box"
 				use:intersect={{
 					cb: (intersecting, el) => el.classList.toggle('intersecting', intersecting),
+					once,
 					options: {threshold},
 				}}
 			>
@@ -43,7 +49,7 @@
 		color: var(--color_6);
 		background-color: hsla(var(--hue_6), 50%, 80%, 0.15);
 	}
-	input {
+	.threshold {
 		width: var(--input_width_min);
 	}
 </style>

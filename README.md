@@ -21,6 +21,15 @@ Your callback is called when `el` enters or leaves the viewport:
 <div use:intersect={(intersecting, el) => /* ... */}>
 ```
 
+Pass `once: true` to call your callback only when `el` first enters and leaves the viewport:
+
+```svelte
+<div use:intersect={{
+	cb: (intersecting, el) => /* ... */,
+	once: true,
+}}>
+```
+
 With `options` forwarded to the
 [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver):
 
