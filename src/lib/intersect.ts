@@ -1,7 +1,7 @@
 import type {Action} from 'svelte/action';
 
 export interface IntersectCallback {
-	(intersecting: boolean, el: HTMLElement | SVGElement, disconnect: () => void): void; // TODO how to forward a generic?
+	(intersecting: boolean, el: HTMLElement | SVGElement, disconnect: () => void): void; // TODO how to forward generic `el` type?
 }
 
 export interface IntersectParams {
@@ -12,9 +12,7 @@ export interface IntersectParams {
 
 export type IntersectParamsOrCallback = IntersectCallback | IntersectParams;
 
-/**
- * ask an LLM or see intersect.fuz.dev
- */
+// TODO how to forward generic `el` type?
 export const intersect: Action<HTMLElement | SVGElement, IntersectParamsOrCallback> = (
 	el,
 	initial_params,
