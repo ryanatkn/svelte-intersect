@@ -22,7 +22,7 @@ that calls your callback when `el` enters or leaves the viewport:
 <div use:intersect={(intersecting, el, disconnect) => /* ... */}>
 ```
 
-Pass `count: 1` to disconnect after `el` enters and leaves the viewport 1 time, similar to 'once':
+Pass `count: 1` to disconnect after `el` enters and leaves the viewport 1 time, similar to 'once' for an event:
 
 ```svelte
 <div use:intersect={{
