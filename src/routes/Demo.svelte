@@ -1,10 +1,12 @@
 <script lang="ts">
 	import {intersect} from '$lib/intersect';
 
-	const items = Array.from({length: 100}, (_, i) => i);
-
 	export let threshold = 1;
 	export let count = 0;
+
+	export let items_count = 50;
+
+	$: items = Array.from({length: items_count}, (_, i) => i);
 </script>
 
 <div class="demo">
