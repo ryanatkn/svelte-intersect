@@ -1,11 +1,15 @@
-# @fuz.dev/intersect
+# `@fuz.dev/intersect`
 
 > a [Svelte action](https://svelte.dev/docs/svelte-action) for
 > [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver)
 
 demo: [intersect.fuz.dev](https://intersect.fuz.dev/)
 
-npm: [@fuz.dev/intersect](https://www.npmjs.com/package/@fuz.dev/intersect)
+npm: [`@fuz.dev/intersect`](https://www.npmjs.com/package/@fuz.dev/intersect)
+
+[repl](https://svelte.dev/repl/fad8afe445344c6ab38caea752a3dec5?version=4.1.2)
+
+## Usage
 
 ```bash
 npm i -D @fuz.dev/intersect
@@ -42,11 +46,13 @@ For more see the
 [IntersectionObserver docs](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver) on MDN
 and the demo at [intersect.fuz.dev](https://intersect.fuz.dev/).
 
-todos
+## Todo
 
 - look more into making the `el` type generic
 - change to `svelte-kit package`
 - change to changesets
 - maybe don't use a table for the API docs, `Library`?
 
-License: [MIT](LICENSE)
+## License
+
+[MIT](LICENSE)
