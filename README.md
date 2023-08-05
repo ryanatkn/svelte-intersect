@@ -34,7 +34,7 @@ For more complex behavior:
 
 | property   | default     | description                                                                                                                                 |
 | ---------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `cb`       |             | called every time the element enters or leaves the viewport                                                                                 |
+| `cb`       |             | called every time the element enters or leaves the viewport until the action's observer is disconnected                                     |
 | `count?`   | `undefined` | pass `1` to disconnect after `el` enters and leaves the viewport one time, similar to 'once' for an event - disable with `undefined` or `0` |
 | `options?` | `undefined` | forwarded to the [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver)       |
 
