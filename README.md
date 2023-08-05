@@ -22,8 +22,11 @@ that calls your callback when `el` enters or leaves the viewport:
 <div use:intersect={(intersecting, el, disconnect) => /* ... */}>
 ```
 
+You can also pass an object with options:
+
 | property  | default     | description                                                                                                                                 |
 | --------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `cb`      |             | `(intersecting: boolean, el: Element, disconnect: () => void) => void`                                                                      |
 | `count`   | `undefined` | pass `1` to disconnect after `el` enters and leaves the viewport one time, similar to 'once' for an event - disable with `undefined` or `0` |
 | `options` | `undefined` | forwarded to the [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver)       |
 
