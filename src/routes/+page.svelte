@@ -21,12 +21,6 @@
 				<a class="chip" href="https://www.npmjs.com/package/@fuz.dev/intersect">npm</a>
 				<a class="chip" href="https://www.fuz.dev">fuz.dev</a>
 			</p>
-			<blockquote>
-				demo source code: <a
-					href="https://github.com/fuz-dev/intersect/blob/main/src/routes/Demo.svelte"
-					>src/routes/Demo.svelte</a
-				>
-			</blockquote>
 		</div>
 	</section>
 	<section class="box">
@@ -55,6 +49,12 @@
 				<p>
 					A <code>count</code> of <code>0</code> makes the callback never trigger.
 				</p>
+				<blockquote>
+					Demo source code: <a
+						href="https://github.com/fuz-dev/intersect/blob/main/src/routes/Demo.svelte"
+						>src/routes/Demo.svelte</a
+					>
+				</blockquote>
 			</details>
 		</div>
 		<div class="demos">
