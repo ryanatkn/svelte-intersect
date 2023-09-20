@@ -1,5 +1,11 @@
 # @fuz.dev/intersect
 
+## 0.2.2
+
+### Patch Changes
+
+- b8e1407: include files in package.json
+
 ## 0.2.1
 
 ### Patch Changes
