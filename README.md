@@ -38,7 +38,7 @@ For more complex behavior:
 <div use:intersect={{
   cb: (intersecting, el, disconnect) => /* ... */,
   count: 1, // 1 is like 'once', 0 disables, <0 infinite
-  options: {threshold, root, rootMagin}, // IntersectionObserverInit options to IntersectionObserver
+  options: {threshold, root, rootMagin}, // IntersectionObserver options
 }}>
 ```
 
@@ -46,7 +46,7 @@ For more complex behavior:
 | ---------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `cb`       |             | called every time the element enters or leaves the viewport until the action's observer is disconnected                                                                                                         |
 | `count?`   | `undefined` | pass `1` to disconnect after `el` enters and leaves the viewport one time, similar to 'once' for an event - disable the callback with `0`, and never disconnect with `undefined` or a negative number like `-1` |
-| `options?` | `undefined` | forwarded to the [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver)                                                                           |
+| `options?` | `undefined` | `IntersectionObserverInit` options forwarded to the [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver)                                        |
 
 For more see the
 [IntersectionObserver docs](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver) on MDN
