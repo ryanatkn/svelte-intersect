@@ -16,6 +16,7 @@
 					>IntersectionObserver</a
 				>
 			</blockquote>
+			<code class="box padded_md spaced">npm i -D @fuz.dev/intersect</code>
 			<p>
 				<a class="chip" href="https://github.com/fuz-dev/intersect">GitHub</a>
 				<a class="chip" href="https://www.npmjs.com/package/@fuz.dev/intersect">npm</a>

@@ -26,13 +26,19 @@ that calls your callback when `el` enters or leaves the viewport:
 <div use:intersect={(intersecting, el, disconnect) => /* ... */}>
 ```
 
+```ts
+export interface IntersectCallback {
+	(intersecting: boolean, el: HTMLElement | SVGElement, disconnect: () => void): void;
+}
+```
+
 For more complex behavior:
 
 ```svelte
 <div use:intersect={{
   cb: (intersecting, el, disconnect) => /* ... */,
   count: 1, // 1 is like 'once', 0 disables, <0 infinite
-  options: {threshold, root, rootMagin}, // IntersectionObserver options
+  options: {threshold, root, rootMagin}, // IntersectionObserverInit options to IntersectionObserver
 }}>
 ```
 
@@ -49,8 +55,6 @@ and the demo at [intersect.fuz.dev](https://intersect.fuz.dev/).
 ## Todo
 
 - look more into making the `el` type generic
-- change to `svelte-kit package`
-- change to changesets
 - maybe don't use a table for the API docs, `Library`?
 
 ## License
