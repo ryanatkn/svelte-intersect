@@ -8,8 +8,8 @@
 		<header>
 			<h1>@fuz.dev/intersect</h1>
 		</header>
-		<div class="panel padded_md">
-			<blockquote>
+		<div class="panel padded_xl">
+			<blockquote class="prose">
 				a <a href="https://svelte.dev/">Svelte</a> action for
 				<a
 					href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver"
@@ -17,16 +17,16 @@
 				>
 			</blockquote>
 			<code class="box padded_md spaced">npm i -D @fuz.dev/intersect</code>
-			<p>
+			<div class="box row">
 				<a class="chip" href="https://github.com/fuz-dev/intersect">GitHub</a>
 				<a class="chip" href="https://www.npmjs.com/package/@fuz.dev/intersect">npm</a>
 				<a class="chip" href="https://www.fuz.dev">fuz.dev</a>
-			</p>
+			</div>
 		</div>
 	</section>
-	<section class="box">
+	<section class="box prose">
 		<h2>demo</h2>
-		<div class="prose width_sm padded_md panel spaced">
+		<div class="width_sm padded_md panel spaced">
 			<details>
 				<summary>more info</summary>
 				<p>
@@ -58,6 +58,8 @@
 				</p>
 			</details>
 		</div>
+	</section>
+	<section>
 		<div class="demos">
 			<Demo />
 			<Demo threshold={1} />
@@ -95,5 +97,11 @@
 	/* TODO hack, is a `:last-child` thing */
 	details:not([open]) summary {
 		margin-bottom: 0;
+	}
+	.chip {
+		margin-right: var(--spacing_md);
+	}
+	.chip:last-child {
+		margin-right: 0;
 	}
 </style>
