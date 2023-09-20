@@ -56,8 +56,6 @@ and the demo at [intersect.fuz.dev](https://intersect.fuz.dev/).
 ## Todo
 
 - look more into making the `el` type generic
-- change to `svelte-kit package`
-- change to changesets
 - maybe don't use a table for the API docs, `Library`?
 
 ## License
