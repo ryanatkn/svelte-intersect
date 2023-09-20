@@ -48,7 +48,6 @@ For more complex behavior:
 | `count?`   | `undefined` | pass `1` to disconnect after `el` enters and leaves the viewport one time, similar to 'once' for an event - disable the callback with `0`, and never disconnect with `undefined` or a negative number like `-1` |
 | `options?` | `undefined` | forwarded to the [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver)                                                                           |
 
-
 For more see the
 [IntersectionObserver docs](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver) on MDN
 and the demo at [intersect.fuz.dev](https://intersect.fuz.dev/).
