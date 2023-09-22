@@ -1,5 +1,11 @@
 # @fuz.dev/intersect
 
+## 0.2.3
+
+### Patch Changes
+
+- 7bfdfb6: upgrade deps
+
 ## 0.2.2
 
 ### Patch Changes
