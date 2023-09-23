@@ -1,22 +1,22 @@
-# `@fuz.dev/intersect`
+# `@fuz.dev/svelte-intersect`
 
 > a [Svelte action](https://svelte.dev/docs/svelte-action) for
 > [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver)
 
 demo: [intersect.fuz.dev](https://intersect.fuz.dev/)
 
-npm: [`@fuz.dev/intersect`](https://www.npmjs.com/package/@fuz.dev/intersect)
+npm: [`@fuz.dev/svelte-intersect`](https://www.npmjs.com/package/@fuz.dev/svelte-intersect)
 
 [repl](https://svelte.dev/repl/fad8afe445344c6ab38caea752a3dec5?version=4.1.2)
 
 ## Usage
 
 ```bash
-npm i -D @fuz.dev/intersect
+npm i -D @fuz.dev/svelte-intersect
 ```
 
 ```ts
-import {intersect} from '@fuz.dev/intersect';
+import {intersect} from '@fuz.dev/svelte-intersect';
 ```
 
 `intersect` is a [Svelte action](https://svelte.dev/docs/svelte-action)

@@ -1,11 +1,11 @@
 {
-  "name": "@fuz.dev/intersect",
+  "name": "@fuz.dev/svelte-intersect",
   "description": "a Svelte action for IntersectionObserver",
   "license": "MIT",
   "version": "0.2.3",
   "type": "module",
   "homepage": "https://intersect.fuz.dev/",
-  "repository": "https://github.com/fuz-dev/intersect",
+  "repository": "https://github.com/fuz-dev/svelte-intersect",
   "engines": {
     "node": ">=20.5"
   },
