@@ -1,5 +1,11 @@
 # @fuz.dev/svelte-intersect
 
+## 0.3.0
+
+### Minor Changes
+
+- 2ad24f9: rename to @fuz.dev/svelte-intersect
+
 ## 0.2.3
 
 ### Patch Changes
