@@ -1,5 +1,12 @@
 # @fuz.dev/svelte_intersect
 
+## 0.4.0
+
+### Minor Changes
+
+- 1c18bd1: rename to @fuz.dev/svelte_intersect
+- 1c18bd1: bump node engine to 20.7
+
 ## 0.3.0
 
 ### Minor Changes
