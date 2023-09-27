@@ -6,7 +6,7 @@
 <main class="box">
 	<section class="prose text_align_center">
 		<header>
-			<h1>@fuz.dev/svelte-intersect</h1>
+			<h1>@fuz.dev/svelte_intersect</h1>
 		</header>
 		<div class="panel padded_xl">
 			<blockquote class="prose">
@@ -16,10 +16,10 @@
 					>IntersectionObserver</a
 				>
 			</blockquote>
-			<code class="box padded_md spaced">npm i -D @fuz.dev/svelte-intersect</code>
+			<code class="box padded_md spaced">npm i -D @fuz.dev/svelte_intersect</code>
 			<div class="box row">
-				<a class="chip" href="https://github.com/fuz-dev/svelte-intersect">GitHub</a>
-				<a class="chip" href="https://www.npmjs.com/package/@fuz.dev/svelte-intersect">npm</a>
+				<a class="chip" href="https://github.com/fuz-dev/svelte_intersect">GitHub</a>
+				<a class="chip" href="https://www.npmjs.com/package/@fuz.dev/svelte_intersect">npm</a>
 				<a class="chip" href="https://www.fuz.dev">fuz.dev</a>
 			</div>
 		</div>
@@ -52,7 +52,7 @@
 				</p>
 				<p>
 					Demo source code: <a
-						href="https://github.com/fuz-dev/svelte-intersect/blob/main/src/routes/Demo.svelte"
+						href="https://github.com/fuz-dev/svelte_intersect/blob/main/src/routes/Demo.svelte"
 						>src/routes/Demo.svelte</a
 					>
 				</p>
