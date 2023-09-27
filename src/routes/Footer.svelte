@@ -1,6 +1,6 @@
 <footer class="box">
-	<a class="chip" href="https://github.com/fuz-dev/svelte-intersect"
-		>github.com/fuz-dev/svelte-intersect</a
+	<a class="chip" href="https://github.com/fuz-dev/svelte_intersect"
+		>github.com/fuz-dev/svelte_intersect</a
 	>
 </footer>
 

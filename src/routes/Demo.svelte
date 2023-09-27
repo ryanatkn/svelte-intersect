@@ -1,5 +1,5 @@
 <script lang="ts">
-	import {intersect} from '$lib/intersect';
+	import {intersect} from '$lib/intersect.js';
 
 	export let threshold = 0;
 	export let count = -1;

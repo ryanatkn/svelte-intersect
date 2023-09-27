@@ -1,1 +1,1 @@
-export * from '$lib/intersect';
+export * from '$lib/intersect.js';
