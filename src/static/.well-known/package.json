@@ -7,7 +7,7 @@
   "homepage": "https://intersect.fuz.dev/",
   "repository": "https://github.com/fuz-dev/svelte_intersect",
   "engines": {
-    "node": ">=20.5"
+    "node": ">=20.7"
   },
   "scripts": {
     "start": "gro dev",
