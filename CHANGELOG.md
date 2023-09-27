@@ -1,5 +1,11 @@
 # @fuz.dev/svelte_intersect
 
+## 0.5.0
+
+### Minor Changes
+
+- 7fb0082: fix tsconfig "moduleResolution" back to "bundler"
+
 ## 0.4.0
 
 ### Minor Changes
