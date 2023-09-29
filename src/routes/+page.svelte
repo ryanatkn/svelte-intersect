@@ -1,4 +1,9 @@
 <script lang="ts">
+	import 'prismjs'; // TODO why are these needed?
+	import 'prism-svelte';
+	import '@fuz.dev/fuz_code/prism.css';
+	import Code from '@fuz.dev/fuz_code/Code.svelte';
+
 	import Footer from '$routes/Footer.svelte';
 	import Demo from '$routes/Demo.svelte';
 </script>
@@ -26,6 +31,21 @@
 	</section>
 	<section class="box prose">
 		<h2>demo</h2>
+		<div class="spaced">
+			<Code lang="ts" content={`import {intersect} from '@fuz.dev/svelte_intersect';`} />
+		</div>
+		<div class="spaced">
+			<Code
+				content={`<li
+	use:intersect={{
+		cb: (intersecting, el) =>
+			el.classList.toggle('intersecting', intersecting),
+		count,
+		options: {threshold},
+	}}
+>`}
+			/>
+		</div>
 		<div class="width_sm padded_md panel spaced">
 			<details>
 				<summary>more info</summary>
