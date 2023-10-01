@@ -2,126 +2,42 @@
 	import 'prismjs'; // TODO why are these needed?
 	import 'prism-svelte';
 	import '@fuz.dev/fuz_code/prism.css';
-	import Code from '@fuz.dev/fuz_code/Code.svelte';
 
-	import Footer from '$routes/Footer.svelte';
-	import Demo from '$routes/Demo.svelte';
+	import LibraryHeader from '@fuz.dev/fuz_library/LibraryHeader.svelte';
+	import LibraryFooter from '@fuz.dev/fuz_library/LibraryFooter.svelte';
+	import {parse_package_meta} from '@fuz.dev/fuz_library/package.js';
+
+	import IntersectTome from '$routes/IntersectTome.svelte';
+
+	// TODO SvelteKit warns about this but we put `/static` in `/src` because of what it's saying,
+	/// maybe change to import as the first item from `packages`
+	import package_json from '../static/.well-known/package.json';
+	const pkg = parse_package_meta(package_json.homepage, package_json);
 </script>
 
-<main class="box">
-	<section class="prose text_align_center">
-		<header>
-			<h1>@fuz.dev/svelte_intersect</h1>
-		</header>
-		<div class="panel padded_xl">
-			<blockquote class="prose">
-				a <a href="https://svelte.dev/">Svelte</a> action for
-				<a
-					href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver"
-					>IntersectionObserver</a
-				>
-			</blockquote>
-			<code class="box padded_md spaced">npm i -D @fuz.dev/svelte_intersect</code>
-			<div class="box row">
-				<a class="chip" href="https://github.com/fuz-dev/svelte_intersect">GitHub</a>
-				<a class="chip" href="https://www.npmjs.com/package/@fuz.dev/svelte_intersect">npm</a>
-				<a class="chip" href="https://www.fuz.dev">fuz.dev</a>
-			</div>
-		</div>
-	</section>
-	<section class="box prose">
-		<h2>demo</h2>
-		<div class="spaced">
-			<Code lang="ts" content={`import {intersect} from '@fuz.dev/svelte_intersect';`} />
-		</div>
-		<div class="spaced">
-			<Code
-				content={`<li
-	use:intersect={{
-		cb: (intersecting, el) =>
-			el.classList.toggle('intersecting', intersecting),
-		count,
-		options: {threshold},
-	}}
->`}
-			/>
-		</div>
-		<div class="width_sm padded_md panel spaced">
-			<details>
-				<summary>more info</summary>
-				<p>
-					An <code>options.threshold</code> of <code>0</code> triggers the event when the element is
-					onscreen at least a pixel, and a value of <code>1</code> triggers the event when it is
-					fully onscreen. Learn more about
-					<a
-						href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver"
-						>IntersectionObserver</a
-					>.
-				</p>
-				<p>
-					A <code>count</code> of <code>1</code> disconnects the observer after the element enters
-					and leaves the viewport one time, like <code>'once'</code> for events. Similar for any positive
-					integer.
-				</p>
-				<p>
-					A <code>count</code> that's negative or <code>undefined</code> makes it so it will never automatically
-					disconnect.
-				</p>
-				<p>
-					A <code>count</code> of <code>0</code> makes the callback never trigger.
-				</p>
-				<p>
-					Demo source code: <a
-						href="https://github.com/fuz-dev/svelte_intersect/blob/main/src/routes/Demo.svelte"
-						>src/routes/Demo.svelte</a
-					>
-				</p>
-			</details>
-		</div>
-	</section>
-	<section>
-		<div class="demos">
-			<Demo />
-			<Demo threshold={1} />
-			<Demo count={1} />
-		</div>
-	</section>
-	<section>
-		<Footer />
-	</section>
+<main class="box width_full">
+	<div class="box width_md">
+		<section>
+			<LibraryHeader {pkg} />
+		</section>
+		<section>
+			<IntersectTome />
+		</section>
+		<section>
+			<LibraryFooter {pkg} root_url="https://www.fuz.dev/" />
+		</section>
+	</div>
 </main>
 
 <style>
 	main {
+		margin-bottom: var(--spacing_xl5);
+	}
+	section {
+		margin-top: var(--spacing_xl3);
+		margin-bottom: var(--spacing_xl3);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin: 0 auto;
-	}
-	h1 {
-		text-align: center;
-	}
-	/* TODO upstream */
-	@media (max-width: 440px) {
-		h1 {
-			font-size: var(--size_xl2);
-		}
-	}
-	section {
-		margin-bottom: var(--spacing_xl4);
-	}
-	.demos {
-		display: flex;
-		gap: var(--spacing_lg);
-	}
-	/* TODO hack, is a `:last-child` thing */
-	details:not([open]) summary {
-		margin-bottom: 0;
-	}
-	.chip {
-		margin-right: var(--spacing_md);
-	}
-	.chip:last-child {
-		margin-right: 0;
 	}
 </style>
