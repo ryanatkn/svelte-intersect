@@ -9,6 +9,10 @@ npm: [`@fuz.dev/svelte_intersect`](https://www.npmjs.com/package/@fuz.dev/svelte
 
 [repl](https://svelte.dev/repl/fad8afe445344c6ab38caea752a3dec5?version=4.1.2)
 
+todo
+
+- figure out how to make the `el` type inferred/generic
+
 ## Usage
 
 ```bash
@@ -51,11 +55,6 @@ For more complex behavior:
 For more see the
 [IntersectionObserver docs](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver) on MDN
 and the demo at [intersect.fuz.dev](https://intersect.fuz.dev/).
-
-## Todo
-
-- look more into making the `el` type generic
-- maybe don't use a table for the API docs, `Library`?
 
 ## License
 
