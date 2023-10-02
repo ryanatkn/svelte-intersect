@@ -3,15 +3,11 @@
 > a [Svelte action](https://svelte.dev/docs/svelte-action) for
 > [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver)
 
-demo: [intersect.fuz.dev](https://intersect.fuz.dev/)
-
-npm: [`@fuz.dev/svelte_intersect`](https://www.npmjs.com/package/@fuz.dev/svelte_intersect)
-
-[repl](https://svelte.dev/repl/fad8afe445344c6ab38caea752a3dec5?version=4.1.2)
-
-todo
-
-- figure out how to make the `el` type inferred/generic
+- demo: [intersect.fuz.dev](https://intersect.fuz.dev/)
+- npm: [`@fuz.dev/svelte_intersect`](https://www.npmjs.com/package/@fuz.dev/svelte_intersect)
+- Svelte [repl](https://svelte.dev/repl/fad8afe445344c6ab38caea752a3dec5?version=4.1.2)
+- todo
+  - figure out how to make the `el` type inferred/generic
 
 ## Usage
 
