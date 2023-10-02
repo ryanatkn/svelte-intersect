@@ -22,7 +22,7 @@
   "devDependencies": {
     "@changesets/changelog-git": "^0.1.14",
     "@feltjs/eslint-config": "^0.4.0",
-    "@fuz.dev/fuz": "^0.70.1",
+    "@fuz.dev/fuz": "^0.71.0",
     "@fuz.dev/fuz_code": "^0.2.0",
     "@fuz.dev/fuz_library": "^0.8.0",
     "@grogarden/gro": "^0.93.1",

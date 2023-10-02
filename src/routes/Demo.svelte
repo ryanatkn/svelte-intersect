@@ -3,7 +3,6 @@
 
 	export let threshold = 0;
 	export let count = -1;
-
 	export let items_count = 100;
 
 	$: items = Array.from({length: items_count}, (_, i) => i);

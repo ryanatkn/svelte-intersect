@@ -10,6 +10,6 @@ export default {
 	kit: {
 		adapter: adapter(),
 		files: {assets: 'src/static'},
-		alias: {$routes: 'src/routes'},
+		alias: {$routes: 'src/routes', $fixtures: 'src/fixtures'},
 	},
 };
