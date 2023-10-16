@@ -55,5 +55,6 @@ export const package_json = {
 		'.': {default: './dist/index.js', types: './dist/index.d.ts'},
 		'./intersect.js': {default: './dist/intersect.js', types: './dist/intersect.d.ts'},
 		'./package.gen.js': {default: './dist/package.gen.js', types: './dist/package.gen.d.ts'},
+		'./package.js': {default: './dist/package.js', types: './dist/package.d.ts'},
 	},
 } satisfies PackageJson;

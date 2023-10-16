@@ -77,6 +77,10 @@
     "./package.gen.js": {
       "default": "./dist/package.gen.js",
       "types": "./dist/package.gen.d.ts"
+    },
+    "./package.js": {
+      "default": "./dist/package.js",
+      "types": "./dist/package.d.ts"
     }
   }
 }
