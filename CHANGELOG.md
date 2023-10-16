@@ -1,5 +1,12 @@
 # @fuz.dev/svelte_intersect
 
+## 0.5.1
+
+### Patch Changes
+
+- cb8de17: publish $lib/package.ts
+- cb8de17: add svelte peer dep
+
 ## 0.5.0
 
 ### Minor Changes
