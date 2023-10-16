@@ -6,6 +6,6 @@
 
 <style>
 	footer {
-		margin-top: var(--spacing_xl4);
+		margin-top: var(--spacing_4);
 	}
 </style>

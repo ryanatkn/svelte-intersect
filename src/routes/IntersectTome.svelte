@@ -71,6 +71,6 @@
 		margin-bottom: 0;
 	}
 	section {
-		margin-bottom: var(--spacing_xl4);
+		margin-bottom: var(--spacing_4);
 	}
 </style>

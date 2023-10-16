@@ -55,7 +55,7 @@
 	}
 	li {
 		width: 100%;
-		padding: var(--spacing_xl);
+		padding: var(--spacing_1);
 		background-color: hsla(var(--hue_7), 50%, 80%, 0.3);
 		font-weight: 900;
 		transition: background-color var(--duration_2);
