@@ -73,6 +73,10 @@
     "./intersect.js": {
       "default": "./dist/intersect.js",
       "types": "./dist/intersect.d.ts"
+    },
+    "./package.gen.js": {
+      "default": "./dist/package.gen.js",
+      "types": "./dist/package.gen.d.ts"
     }
   }
 }
