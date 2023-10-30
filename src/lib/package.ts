@@ -6,7 +6,7 @@ export const package_json = {
 	name: '@fuz.dev/svelte_intersect',
 	description: 'a Svelte action for IntersectionObserver',
 	license: 'MIT',
-	version: '0.5.1',
+	version: '0.6.0',
 	type: 'module',
 	homepage: 'https://intersect.fuz.dev/',
 	repository: 'https://github.com/fuz-dev/svelte_intersect',

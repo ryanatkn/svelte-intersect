@@ -1,5 +1,11 @@
 # @fuz.dev/svelte_intersect
 
+## 0.6.0
+
+### Minor Changes
+
+- c8a0f77: upgrade deps
+
 ## 0.5.1
 
 ### Patch Changes
