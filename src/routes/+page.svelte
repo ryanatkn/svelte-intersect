@@ -6,6 +6,7 @@
 	import LibraryHeader from '@fuz.dev/fuz_library/LibraryHeader.svelte';
 	import LibraryFooter from '@fuz.dev/fuz_library/LibraryFooter.svelte';
 	import {parse_package_meta} from '@fuz.dev/fuz_library/package_meta.js';
+	import {base} from '$app/paths';
 
 	import IntersectTome from '$routes/IntersectTome.svelte';
 	import {package_json} from '$lib/package.js';
@@ -17,6 +18,9 @@
 	<div class="box width_md">
 		<section>
 			<LibraryHeader {pkg} />
+		</section>
+		<section class="box">
+			<a href="{base}/about" class="chip">about</a>
 		</section>
 		<section>
 			<IntersectTome />
@@ -30,10 +34,10 @@
 <style>
 	main {
 		margin-bottom: var(--spacing_5);
+		padding: var(--spacing_3) 0;
 	}
 	section {
-		margin-top: var(--spacing_3);
-		margin-bottom: var(--spacing_3);
+		margin-bottom: var(--spacing_5);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
