@@ -1,7 +1,7 @@
 {
   "name": "@fuz.dev/svelte_intersect",
   "description": "a Svelte action for IntersectionObserver",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "public": true,
   "license": "MIT",
   "type": "module",

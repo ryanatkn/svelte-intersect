@@ -1,5 +1,11 @@
 # @fuz.dev/svelte_intersect
 
+## 0.6.1
+
+### Patch Changes
+
+- ac78782: upgrade `@grogarden/gro` to fix `package.ts`
+
 ## 0.6.0
 
 ### Minor Changes
