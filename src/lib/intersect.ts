@@ -1,14 +1,14 @@
 import type {Action} from 'svelte/action';
 
-export interface IntersectCallback {
+export interface Intersect_Callback {
 	(intersecting: boolean, el: HTMLElement | SVGElement, disconnect: () => void): void; // TODO how to forward generic `el` type?
 }
 
-export interface IntersectParams {
+export interface Intersect_Params {
 	/**
 	 * Called when the element enters or leaves the viewport.
 	 */
-	cb: IntersectCallback;
+	cb: Intersect_Callback;
 	/**
 	 * A value of 0 disables the callback,
 	 * less than 0 or undefined makes the callback get called every time,
@@ -21,20 +21,20 @@ export interface IntersectParams {
 	options?: IntersectionObserverInit;
 }
 
-export type IntersectParamsOrCallback = IntersectCallback | IntersectParams;
+export type Intersect_Params_Or_Callback = Intersect_Callback | Intersect_Params;
 
 // TODO how to forward generic `el` type?
-export const intersect: Action<HTMLElement | SVGElement, IntersectParamsOrCallback> = (
+export const intersect: Action<HTMLElement | SVGElement, Intersect_Params_Or_Callback> = (
 	el,
 	initial_params,
 ) => {
-	let cb: IntersectCallback;
+	let cb: Intersect_Callback;
 	let count: number | undefined;
 	let options: IntersectionObserverInit | undefined;
 	let intersections: number;
 	let observer: IntersectionObserver | null;
 
-	const set_params = (params: IntersectParamsOrCallback): void => {
+	const set_params = (params: Intersect_Params_Or_Callback): void => {
 		intersections = 0;
 		if (typeof params === 'function') {
 			cb = params;

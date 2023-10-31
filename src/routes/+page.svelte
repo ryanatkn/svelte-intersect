@@ -3,12 +3,12 @@
 	import 'prism-svelte';
 	import '@fuz.dev/fuz_code/prism.css';
 
-	import LibraryHeader from '@fuz.dev/fuz_library/LibraryHeader.svelte';
-	import LibraryFooter from '@fuz.dev/fuz_library/LibraryFooter.svelte';
+	import Library_Header from '@fuz.dev/fuz_library/Library_Header.svelte';
+	import Library_Footer from '@fuz.dev/fuz_library/Library_Footer.svelte';
 	import {parse_package_meta} from '@fuz.dev/fuz_library/package_meta.js';
 	import {base} from '$app/paths';
 
-	import IntersectTome from '$routes/IntersectTome.svelte';
+	import Intersect_Tome from '$routes/Intersect_Tome.svelte';
 	import {package_json} from '$lib/package.js';
 
 	const pkg = parse_package_meta(package_json.homepage, package_json);
@@ -17,16 +17,16 @@
 <main class="box width_full">
 	<div class="box width_md">
 		<section>
-			<LibraryHeader {pkg} />
+			<Library_Header {pkg} />
 		</section>
 		<section class="box">
 			<a href="{base}/about" class="chip">about</a>
 		</section>
 		<section>
-			<IntersectTome />
+			<Intersect_Tome />
 		</section>
 		<section>
-			<LibraryFooter {pkg} root_url="https://www.fuz.dev/" />
+			<Library_Footer {pkg} root_url="https://www.fuz.dev/" />
 		</section>
 	</div>
 </main>

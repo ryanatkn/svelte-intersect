@@ -27,7 +27,7 @@ that calls your callback when `el` enters or leaves the viewport:
 ```
 
 ```ts
-export interface IntersectCallback {
+export interface Intersect_Callback {
 	(intersecting: boolean, el: HTMLElement | SVGElement, disconnect: () => void): void;
 }
 ```
