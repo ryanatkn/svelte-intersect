@@ -1,5 +1,11 @@
 # @fuz.dev/svelte_intersect
 
+## 0.7.0
+
+### Minor Changes
+
+- 8e8bcd7: rename to `Proper_Snakes`
+
 ## 0.6.1
 
 ### Patch Changes
