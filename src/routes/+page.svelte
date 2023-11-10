@@ -9,9 +9,9 @@
 	import {base} from '$app/paths';
 
 	import Intersect_Tome from '$routes/Intersect_Tome.svelte';
-	import {package_json} from '$lib/package.js';
+	import {package_json, src_json} from '$lib/package.js';
 
-	const pkg = parse_package_meta(package_json.homepage, package_json);
+	const pkg = parse_package_meta(package_json.homepage, package_json, src_json);
 </script>
 
 <main class="box width_full">
