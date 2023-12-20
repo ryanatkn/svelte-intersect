@@ -1,66 +1,72 @@
 # @fuz.dev/svelte_intersect
 
+## 0.8.0
+
+### Minor Changes
+
+- unpublish `$lib/package.ts` ([b0c2665](https://github.com/fuz-dev/svelte_intersect/commit/b0c2665))
+
 ## 0.7.0
 
 ### Minor Changes
 
-- 8e8bcd7: rename to `Proper_Snakes`
+- rename to `Proper_Snakes` ([8e8bcd7](https://github.com/fuz-dev/svelte_intersect/commit/8e8bcd7))
 
 ## 0.6.1
 
 ### Patch Changes
 
-- ac78782: upgrade `@grogarden/gro` to fix `package.ts`
+- upgrade `@grogarden/gro` to fix `package.ts` ([ac78782](https://github.com/fuz-dev/svelte_intersect/commit/ac78782))
 
 ## 0.6.0
 
 ### Minor Changes
 
-- c8a0f77: upgrade deps
+- upgrade deps ([c8a0f77](https://github.com/fuz-dev/svelte_intersect/commit/c8a0f77))
 
 ## 0.5.1
 
 ### Patch Changes
 
-- cb8de17: publish $routes/package.ts
-- cb8de17: add svelte peer dep
+- publish $routes/package.ts ([#6](https://github.com/fuz-dev/svelte_intersect/pull/6))
+- add svelte peer dep ([#6](https://github.com/fuz-dev/svelte_intersect/pull/6))
 
 ## 0.5.0
 
 ### Minor Changes
 
-- 7fb0082: fix tsconfig "moduleResolution" back to "bundler"
+- fix tsconfig "moduleResolution" back to "bundler" ([7fb0082](https://github.com/fuz-dev/svelte_intersect/commit/7fb0082))
 
 ## 0.4.0
 
 ### Minor Changes
 
-- 1c18bd1: rename to @fuz.dev/svelte_intersect
-- 1c18bd1: bump node engine to 20.10
+- rename to @fuz.dev/svelte_intersect ([#5](https://github.com/fuz-dev/svelte_intersect/pull/5))
+- bump node engine to 20.10 ([#5](https://github.com/fuz-dev/svelte_intersect/pull/5))
 
 ## 0.3.0
 
 ### Minor Changes
 
-- 2ad24f9: rename to @fuz.dev/svelte_intersect
+- rename to @fuz.dev/svelte_intersect ([2ad24f9](https://github.com/fuz-dev/svelte_intersect/commit/2ad24f9))
 
 ## 0.2.3
 
 ### Patch Changes
 
-- 7bfdfb6: upgrade deps
+- upgrade deps ([7bfdfb6](https://github.com/fuz-dev/svelte_intersect/commit/7bfdfb6))
 
 ## 0.2.2
 
 ### Patch Changes
 
-- b8e1407: include files in package.json
+- include files in package.json ([b8e1407](https://github.com/fuz-dev/svelte_intersect/commit/b8e1407))
 
 ## 0.2.1
 
 ### Patch Changes
 
-- 3a45577: upgrade deps and migrate to changesets
+- upgrade deps and migrate to changesets ([#4](https://github.com/fuz-dev/svelte_intersect/pull/4))
 
 ## 0.2.0
 
