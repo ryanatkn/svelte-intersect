@@ -22,7 +22,7 @@
 
 ### Patch Changes
 
-- cb8de17: publish $lib/package.ts
+- cb8de17: publish $routes/package.ts
 - cb8de17: add svelte peer dep
 
 ## 0.5.0
@@ -36,7 +36,7 @@
 ### Minor Changes
 
 - 1c18bd1: rename to @fuz.dev/svelte_intersect
-- 1c18bd1: bump node engine to 20.7
+- 1c18bd1: bump node engine to 20.10
 
 ## 0.3.0
 
