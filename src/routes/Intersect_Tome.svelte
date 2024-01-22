@@ -25,12 +25,16 @@
 		<details>
 			<summary>more info</summary>
 			<p>
-				An <code>options.threshold</code> of <code>0</code> triggers the event when the element is
-				onscreen at least a pixel, and a value of <code>1</code> triggers the event when it is fully
-				onscreen. Learn more about
+				An <a
+					href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#threshold"
+					><code>options.threshold</code></a
+				>
+				of <code>0</code> triggers the event when the element is inside the viewport at least a
+				pixel, and a value of <code>1</code> triggers the event when it is fully inside the
+				viewport. See also <code>options.root</code> and <code>options.rootMargin</code> in the
 				<a
 					href="https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver"
-					>IntersectionObserver</a
+					>IntersectionObserver docs</a
 				>.
 			</p>
 			<p>
