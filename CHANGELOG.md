@@ -1,5 +1,11 @@
 # @ryanatkn/svelte-intersect
 
+## 0.10.0
+
+### Minor Changes
+
+- move code to $lib/index.ts ([cce9991](https://github.com/ryanatkn/svelte-intersect/commit/cce9991))
+
 ## 0.9.0
 
 ### Minor Changes
