@@ -1,10 +1,10 @@
-# `@fuz.dev/svelte_intersect`
+# `@ryanatkn/svelte-intersect`
 
 > a [Svelte action](https://svelte.dev/docs/svelte-action) for
 > [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver)
 
-- demo: [intersect.fuz.dev](https://intersect.fuz.dev/)
-- npm: [`@fuz.dev/svelte_intersect`](https://www.npmjs.com/package/@fuz.dev/svelte_intersect)
+- demo: [svelte-intersect.ryanatkn.com](https://svelte-intersect.ryanatkn.com/)
+- npm: [`@ryanatkn/svelte-intersect`](https://www.npmjs.com/package/@ryanatkn/svelte-intersect)
 - Svelte [repl](https://svelte.dev/repl/fad8afe445344c6ab38caea752a3dec5?version=4.1.2)
 - todo
   - figure out how to make the `el` type inferred/generic
@@ -12,11 +12,11 @@
 ## Usage
 
 ```bash
-npm i -D @fuz.dev/svelte_intersect
+npm i -D @ryanatkn/svelte-intersect
 ```
 
 ```ts
-import {intersect} from '@fuz.dev/svelte_intersect';
+import {intersect} from '@ryanatkn/svelte-intersect';
 ```
 
 `intersect` is a [Svelte action](https://svelte.dev/docs/svelte-action)
@@ -50,7 +50,7 @@ For more complex behavior:
 
 For more see the
 [IntersectionObserver docs](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver) on MDN
-and the demo at [intersect.fuz.dev](https://intersect.fuz.dev/).
+and the demo at [svelte-intersect.ryanatkn.com](https://svelte-intersect.ryanatkn.com/).
 
 ## License
 

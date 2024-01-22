@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>intersect.fuz.dev</title>
+	<title>svelte-intersect.ryanatkn.com</title>
 </svelte:head>
 
 <Themed>

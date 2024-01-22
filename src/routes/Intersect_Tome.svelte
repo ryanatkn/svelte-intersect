@@ -7,7 +7,7 @@
 <section class="box prose">
 	<h2>demo</h2>
 	<div class="spaced">
-		<Code lang="ts" content={`import {intersect} from '@fuz.dev/svelte_intersect';`} />
+		<Code lang="ts" content={`import {intersect} from '@ryanatkn/svelte-intersect';`} />
 	</div>
 	<div class="spaced">
 		<Code
@@ -46,9 +46,12 @@
 			</p>
 			<p>
 				Demo source code: <a
-					href="https://github.com/fuz-dev/svelte_intersect/blob/main/src/routes/Demo.svelte"
+					href="https://github.com/ryanatkn/svelte-intersect/blob/main/src/routes/Demo.svelte"
 					>src/routes/Demo.svelte</a
 				>
+			</p>
+			<p>
+				<a href="https://github.com/ryanatkn/svelte-intersect#readme">API docs</a>
 			</p>
 		</details>
 	</div>

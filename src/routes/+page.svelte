@@ -5,6 +5,7 @@
 
 	import Library_Header from '@fuz.dev/fuz_library/Library_Header.svelte';
 	import Library_Footer from '@fuz.dev/fuz_library/Library_Footer.svelte';
+	import Card from '@fuz.dev/fuz_library/Card.svelte';
 	import {parse_package_meta} from '@fuz.dev/fuz_library/package_meta.js';
 	import {base} from '$app/paths';
 
@@ -20,6 +21,13 @@
 			<Library_Header {pkg} />
 		</section>
 		<section class="box">
+			<Card
+				href="https://github.com/ryanatkn/svelte-intersect#readme"
+				attrs={{class: 'card spaced'}}
+			>
+				<div slot="icon"></div>
+				docs
+			</Card>
 			<a href="{base}/about" class="chip">about</a>
 		</section>
 		<section>
