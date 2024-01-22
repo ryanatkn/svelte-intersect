@@ -20,7 +20,8 @@ import {intersect} from '@ryanatkn/svelte-intersect';
 ```
 
 `intersect` is a [Svelte action](https://svelte.dev/docs/svelte-action)
-that calls your callback when `el` enters or leaves the viewport:
+that calls your callback when `el` enters or leaves
+the [viewport](https://developer.mozilla.org/en-US/docs/Web/CSS/Viewport_concepts):
 
 ```svelte
 <div use:intersect={(intersecting, el, disconnect) => /* ... */}>
@@ -36,7 +37,7 @@ For more complex behavior:
 
 ```svelte
 <div use:intersect={{
-  cb: (intersecting, el, disconnect) => /* ... */,
+  cb: (intersecting, el, disconnect) => /* same as the simple API version */,
   count: 1, // 1 is like 'once', 0 disables, <0 infinite
   options: {threshold, root, rootMagin}, // IntersectionObserver options
 }}>
