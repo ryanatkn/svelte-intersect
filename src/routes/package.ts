@@ -57,19 +57,15 @@ export const package_json = {
 		bracketSpacing: false,
 		overrides: [{files: 'package.json', options: {useTabs: false}}],
 	},
-	exports: {
-		'.': {default: './dist/index.js', types: './dist/index.d.ts'},
-		'./intersect.js': {default: './dist/intersect.js', types: './dist/intersect.d.ts'},
-	},
+	exports: {'.': {default: './dist/index.js', types: './dist/index.d.ts'}},
 } satisfies Package_Json;
 
 export const src_json = {
 	name: '@ryanatkn/svelte-intersect',
 	version: '0.9.0',
 	modules: {
-		'.': {path: 'index.ts', declarations: []},
-		'./intersect.js': {
-			path: 'intersect.ts',
+		'.': {
+			path: 'index.ts',
 			declarations: [
 				{name: 'Intersect_Callback', kind: 'type'},
 				{name: 'Intersect_Params', kind: 'type'},

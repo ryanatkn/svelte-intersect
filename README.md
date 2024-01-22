@@ -37,7 +37,7 @@ For more complex behavior:
 
 ```svelte
 <div use:intersect={{
-  cb: (intersecting, el, disconnect) => /* same as the simple API version */,
+  cb: (intersecting, el, disconnect) => /* `Intersect_Callback` */,
   count: 1, // 1 is like 'once', 0 disables, <0 infinite
   options: {threshold, root, rootMagin}, // IntersectionObserver options
 }}>

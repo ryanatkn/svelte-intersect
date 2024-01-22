@@ -74,10 +74,6 @@
     ".": {
       "default": "./dist/index.js",
       "types": "./dist/index.d.ts"
-    },
-    "./intersect.js": {
-      "default": "./dist/intersect.js",
-      "types": "./dist/intersect.d.ts"
     }
   }
 }
