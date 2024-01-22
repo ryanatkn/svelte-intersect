@@ -1,5 +1,13 @@
 # @ryanatkn/svelte-intersect
 
+## 0.9.0
+
+### Minor Changes
+
+- move to `@ryanatkn/svelte-intersect` from `@fuz.dev/svelte_intersect` ([50ccf4c](https://github.com/ryanatkn/svelte-intersect/commit/50ccf4c))
+  and [svelte-intersect.ryanatkn.com](https://svelte-intersect.ryanatkn.com/)
+  from intersect.fuz.dev
+
 ## 0.8.0
 
 ### Minor Changes
