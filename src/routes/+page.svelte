@@ -25,7 +25,7 @@
 				href="https://github.com/ryanatkn/svelte-intersect#readme"
 				attrs={{class: 'card spaced'}}
 			>
-				<div slot="icon"></div>
+				<svelte:fragment slot="icon"></svelte:fragment>
 				docs
 			</Card>
 			<a href="{base}/about" class="chip">about</a>
