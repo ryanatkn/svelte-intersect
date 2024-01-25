@@ -1,5 +1,11 @@
 # svelte-intersect
 
+## 0.11.0
+
+### Minor Changes
+
+- move to `svelte-intersect` from `svelte-intersect` ([3eb7d0f](https://github.com/ryanatkn/svelte-intersect/commit/3eb7d0f))
+
 ## 0.10.0
 
 ### Minor Changes
