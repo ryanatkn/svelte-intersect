@@ -1,10 +1,10 @@
-# `@ryanatkn/svelte-intersect`
+# `svelte-intersect`
 
 > a [Svelte action](https://svelte.dev/docs/svelte-action) for
 > [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver)
 
 - demo: [svelte-intersect.ryanatkn.com](https://svelte-intersect.ryanatkn.com/)
-- npm: [`@ryanatkn/svelte-intersect`](https://www.npmjs.com/package/@ryanatkn/svelte-intersect)
+- npm: [`svelte-intersect`](https://www.npmjs.com/package/svelte-intersect)
 - Svelte [repl](https://svelte.dev/repl/fad8afe445344c6ab38caea752a3dec5?version=4.1.2)
 - todo
   - figure out how to make the `el` type inferred/generic
@@ -12,11 +12,11 @@
 ## Usage
 
 ```bash
-npm i -D @ryanatkn/svelte-intersect
+npm i -D svelte-intersect
 ```
 
 ```ts
-import {intersect} from '@ryanatkn/svelte-intersect';
+import {intersect} from 'svelte-intersect';
 ```
 
 `intersect` is a [Svelte action](https://svelte.dev/docs/svelte-action)

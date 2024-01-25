@@ -1,4 +1,4 @@
-# @ryanatkn/svelte-intersect
+# svelte-intersect
 
 ## 0.10.0
 
@@ -10,7 +10,7 @@
 
 ### Minor Changes
 
-- move to `@ryanatkn/svelte-intersect` from `@fuz.dev/svelte_intersect` ([50ccf4c](https://github.com/ryanatkn/svelte-intersect/commit/50ccf4c))
+- move to `svelte-intersect` from `@fuz.dev/svelte_intersect` ([50ccf4c](https://github.com/ryanatkn/svelte-intersect/commit/50ccf4c))
   and [svelte-intersect.ryanatkn.com](https://svelte-intersect.ryanatkn.com/)
   from intersect.fuz.dev
 
@@ -55,14 +55,14 @@
 
 ### Minor Changes
 
-- rename to @ryanatkn/svelte-intersect ([#5](https://github.com/ryanatkn/svelte-intersect/pull/5))
+- rename to svelte-intersect ([#5](https://github.com/ryanatkn/svelte-intersect/pull/5))
 - bump node engine to 20.10 ([#5](https://github.com/ryanatkn/svelte-intersect/pull/5))
 
 ## 0.3.0
 
 ### Minor Changes
 
-- rename to @ryanatkn/svelte-intersect ([2ad24f9](https://github.com/ryanatkn/svelte-intersect/commit/2ad24f9))
+- rename to svelte-intersect ([2ad24f9](https://github.com/ryanatkn/svelte-intersect/commit/2ad24f9))
 
 ## 0.2.3
 

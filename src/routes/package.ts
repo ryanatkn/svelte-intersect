@@ -4,7 +4,7 @@ import type {Package_Json} from '@ryanatkn/gro/package_json.js';
 import type {Src_Json} from '@ryanatkn/gro/src_json.js';
 
 export const package_json = {
-	name: '@ryanatkn/svelte-intersect',
+	name: 'svelte-intersect',
 	description: 'a Svelte action for IntersectionObserver',
 	version: '0.10.0',
 	public: true,
@@ -61,7 +61,7 @@ export const package_json = {
 } satisfies Package_Json;
 
 export const src_json = {
-	name: '@ryanatkn/svelte-intersect',
+	name: 'svelte-intersect',
 	version: '0.10.0',
 	modules: {
 		'.': {

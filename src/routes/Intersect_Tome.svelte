@@ -7,7 +7,7 @@
 <section class="box prose">
 	<h2>demo</h2>
 	<div class="spaced">
-		<Code lang="ts" content={`import {intersect} from '@ryanatkn/svelte-intersect';`} />
+		<Code lang="ts" content={`import {intersect} from 'svelte-intersect';`} />
 	</div>
 	<div class="spaced">
 		<Code
