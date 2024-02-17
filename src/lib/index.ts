@@ -5,7 +5,7 @@ export interface Intersect_Callback {
 		intersecting: boolean,
 		el: HTMLElement | SVGElement,
 		disconnect: () => void,
-		count: number,
+		intersections: number,
 	): void; // TODO how to forward generic `el` type?
 }
 
@@ -61,7 +61,7 @@ export const intersect: Action<HTMLElement | SVGElement, Intersect_Params_Or_Cal
 		if (count === 0) return; // disable when `count` is `0`, no need to create the observer
 		observer = new IntersectionObserver((entries) => {
 			const intersecting = entries[0].isIntersecting;
-			cb(intersecting, el, disconnect, intersections);
+			cb(intersecting, el, disconnect, intersections); // TODO BLOCK this is the old intersections count, but should the `cb` be called after disonnecting, and that state be included?
 			if (intersecting) {
 				// track each the count of times it enters the viewport
 				intersections++;
