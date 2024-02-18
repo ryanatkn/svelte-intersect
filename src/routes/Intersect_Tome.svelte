@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Code from '@fuz.dev/fuz_code/Code.svelte';
+	import Code from '@ryanatkn/fuz_code/Code.svelte';
 
 	import Demo from '$routes/Demo.svelte';
 </script>
