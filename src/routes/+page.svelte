@@ -1,12 +1,12 @@
 <script lang="ts">
-	import 'prismjs'; // TODO why are these needed?
+	import 'prismjs'; // TODO why are these needed? they're imported by Code, Vite config? looks like it should have been fixed here: https://github.com/vitejs/vite/issues/2672
 	import 'prism-svelte';
-	import '@fuz.dev/fuz_code/prism.css';
+	import '@ryanatkn/fuz_code/prism.css';
 
-	import Library_Header from '@fuz.dev/fuz_library/Library_Header.svelte';
-	import Library_Footer from '@fuz.dev/fuz_library/Library_Footer.svelte';
-	import Card from '@fuz.dev/fuz_library/Card.svelte';
-	import {parse_package_meta} from '@fuz.dev/fuz_library/package_meta.js';
+	import Library_Header from '@ryanatkn/fuz/Library_Header.svelte';
+	import Library_Footer from '@ryanatkn/fuz/Library_Footer.svelte';
+	import Card from '@ryanatkn/fuz/Card.svelte';
+	import {parse_package_meta} from '@ryanatkn/gro/package_meta.js';
 	import {base} from '$app/paths';
 
 	import Intersect_Tome from '$routes/Intersect_Tome.svelte';
@@ -35,7 +35,7 @@
 			<Intersect_Tome />
 		</section>
 		<section>
-			<Library_Footer {pkg} root_url="https://www.fuz.dev/" />
+			<Library_Footer {pkg} root_url="https://www.ryanatkn.com/" />
 		</section>
 	</div>
 </main>
