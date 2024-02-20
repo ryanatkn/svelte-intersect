@@ -56,13 +56,13 @@
 	li {
 		width: 100%;
 		padding: var(--spacing_1);
-		background-color: hsla(var(--hue_7), 50%, 80%, 0.3);
+		background-color: hsla(var(--hue_g), 50%, 80%, 0.3);
 		font-weight: 900;
 		transition: background-color var(--duration_2);
 	}
 	li:global(.intersecting) {
-		color: var(--color_6);
-		background-color: hsla(var(--hue_6), 50%, 80%, 0.15);
+		color: var(--color_f);
+		background-color: hsla(var(--hue_f), 50%, 80%, 0.15);
 	}
 	.threshold,
 	.count {
