@@ -61,7 +61,7 @@
 		transition: background-color var(--duration_2);
 	}
 	li:global(.intersecting) {
-		color: var(--color_f);
+		color: var(--color_f_5);
 		background-color: hsla(var(--hue_f), 50%, 80%, 0.15);
 	}
 	.threshold,
