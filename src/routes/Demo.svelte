@@ -48,14 +48,14 @@
 	.demo {
 		display: flex;
 		flex-direction: column;
-		gap: var(--spacing_lg);
+		gap: var(--space_lg);
 	}
 	ul {
 		width: 100%;
 	}
 	li {
 		width: 100%;
-		padding: var(--spacing_1);
+		padding: var(--space_xl);
 		background-color: hsla(var(--hue_g), 50%, 80%, 0.3);
 		font-weight: 900;
 		transition: background-color var(--duration_2);

@@ -42,11 +42,11 @@
 
 <style>
 	main {
-		margin-bottom: var(--spacing_5);
-		padding: var(--spacing_3) 0;
+		margin-bottom: var(--space_xl5);
+		padding: var(--space_xl3) 0;
 	}
 	section {
-		margin-bottom: var(--spacing_5);
+		margin-bottom: var(--space_xl5);
 		display: flex;
 		flex-direction: column;
 		align-items: center;

@@ -71,13 +71,13 @@
 <style>
 	.demos {
 		display: flex;
-		gap: var(--spacing_lg);
+		gap: var(--space_lg);
 	}
 	/* TODO hack, is a `:last-child` thing */
 	details:not([open]) summary {
 		margin-bottom: 0;
 	}
 	section {
-		margin-bottom: var(--spacing_4);
+		margin-bottom: var(--space_xl4);
 	}
 </style>
