@@ -6,10 +6,10 @@
 
 <section class="box prose">
 	<h2>demo</h2>
-	<div class="spaced">
+	<div class="mb_lg">
 		<Code lang="ts" content={`import {intersect} from 'svelte-intersect';`} />
 	</div>
-	<div class="spaced">
+	<div class="mb_lg">
 		<Code
 			content={`<li
 	use:intersect={{
@@ -21,7 +21,7 @@
 >`}
 		/>
 	</div>
-	<div class="width_sm padded_md panel spaced">
+	<div class="width_sm p_md panel mb_lg">
 		<details>
 			<summary>more info</summary>
 			<p>

@@ -15,7 +15,7 @@
 	const pkg = parse_package_meta(package_json.homepage, package_json, src_json);
 </script>
 
-<main class="box width_full">
+<main class="box w_100">
 	<div class="box width_md">
 		<section>
 			<Library_Header {pkg} />
@@ -23,7 +23,7 @@
 		<section class="box">
 			<Card
 				href="https://github.com/ryanatkn/svelte-intersect#readme"
-				attrs={{class: 'card spaced'}}
+				attrs={{class: 'card mb_lg'}}
 			>
 				<!-- TODO Svelte5 fix api with snippets, conditionally render if provided -->
 				<div slot="icon"></div>
