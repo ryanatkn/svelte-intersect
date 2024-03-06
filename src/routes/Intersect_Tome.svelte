@@ -6,6 +6,8 @@
 	let demo_key = 0;
 
 	const reset = () => demo_key++;
+
+	// TODO maybe use ts-morph to get the type text from the source code
 </script>
 
 <section class="box prose">
@@ -17,8 +19,9 @@
 		<Code
 			content={`<li
 	use:intersect={{
-		cb: (intersecting, el) =>
+		onintersect: ({intersecting, intersections, el, obeserver, disconnect}) =>
 			el.classList.toggle('intersecting', intersecting),
+		ondisconnect: ({intersecting, intersections, el, obeserver}) => { /* */ },
 		count,
 		options: {threshold},
 	}}

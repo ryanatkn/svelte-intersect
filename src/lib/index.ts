@@ -64,8 +64,8 @@ export const intersect: Action<HTMLElement | SVGElement, Intersect_Params_Or_Cal
 		if (count === 0) return; // disable when `count` is `0`, no need to create the observer
 		observer = new IntersectionObserver((entries) => {
 			intersecting = entries[0].isIntersecting;
-			if (onintersect) {
-				onintersect(to_intersect_state(intersecting, intersections, el, disconnect));
+			if (onintersect && observer) {
+				onintersect(to_intersect_state(intersecting, intersections, el, observer, disconnect));
 			}
 			if (intersecting) {
 				// track each the count of times it enters the viewport
@@ -100,6 +100,7 @@ export interface Intersect_State {
 	intersecting: boolean;
 	intersections: number;
 	el: HTMLElement | SVGElement;
+	observer: IntersectionObserver;
 	disconnect: () => void;
 }
 
@@ -107,6 +108,7 @@ const global_intersect_state: Intersect_State = {
 	intersecting: undefined as any,
 	intersections: undefined as any,
 	el: undefined as any,
+	observer: undefined as any,
 	disconnect: undefined as any,
 };
 
@@ -118,12 +120,14 @@ export const to_intersect_state = (
 	intersecting: boolean,
 	intersections: number,
 	el: HTMLElement | SVGElement,
+	observer: IntersectionObserver,
 	disconnect: () => void,
 ): Intersect_State => {
 	const s = global_intersect_state; // TODO maybe make this configurable to be immutable
 	s.intersecting = intersecting;
 	s.intersections = intersections;
 	s.el = el;
+	s.observer = observer;
 	s.disconnect = disconnect;
 	return s;
 };
