@@ -1,5 +1,13 @@
 <script lang="ts">
-	import {intersect} from '$lib/index.js';
+	import {intersect, set_get_intersect_state} from '$lib/index.js';
+
+	set_get_intersect_state(() => ({
+		intersecting: undefined as any,
+		intersections: undefined as any,
+		el: undefined as any,
+		observer: undefined as any,
+		disconnect: undefined as any,
+	}));
 
 	export let threshold = 0;
 	export let count = -1;
@@ -29,14 +37,14 @@
 		</div>
 	</label>
 	<ul class="box">
-		{#each items as item}
+		{#each items as item (item)}
 			<li
 				class="box"
 				use:intersect={{
 					onintersect: (params) => {
-						// console.log(`onintersect params`, params);
 						const {intersecting, el} = params;
 						el.classList.toggle('intersecting', intersecting);
+						console.log(`onintersect params`, params);
 					},
 					ondisconnect: (params) => {
 						console.log(`ondisconnect params`, params);

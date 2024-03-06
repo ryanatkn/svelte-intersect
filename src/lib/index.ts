@@ -112,9 +112,16 @@ const global_intersect_state: Intersect_State = {
 	disconnect: undefined as any,
 };
 
-// TODO does this work?
-// eslint-disable-next-line prefer-const
-export let get_intersect_state = (): Intersect_State => global_intersect_state;
+let get_intersect_state = (): Intersect_State => global_intersect_state;
+
+/**
+ * Sets the getter for an empty `Intersect_State` object.
+ * By default a global instance is reused.
+ * @param get_state
+ */
+export const set_get_intersect_state = (get_state: () => Intersect_State): void => {
+	get_intersect_state = get_state;
+};
 
 export const to_intersect_state = (
 	intersecting: boolean,
@@ -123,7 +130,7 @@ export const to_intersect_state = (
 	observer: IntersectionObserver,
 	disconnect: () => void,
 ): Intersect_State => {
-	const s = global_intersect_state; // TODO maybe make this configurable to be immutable
+	const s = get_intersect_state();
 	s.intersecting = intersecting;
 	s.intersections = intersections;
 	s.el = el;
@@ -150,9 +157,16 @@ const global_disconnect_state: Disconnect_State = {
 	observer: undefined as any,
 };
 
-// TODO does this work?
-// eslint-disable-next-line prefer-const
-export let get_disconnect_state = (): Disconnect_State => global_disconnect_state;
+let get_disconnect_state = (): Disconnect_State => global_disconnect_state;
+
+/**
+ * Sets the getter for an empty `Disconnect_State` object.
+ * By default a global instance is reused.
+ * @param get_state
+ */
+export const set_get_disconnect_state = (get_state: () => Disconnect_State): void => {
+	get_disconnect_state = get_state;
+};
 
 export const to_disconnect_state = (
 	intersecting: boolean,
@@ -160,7 +174,7 @@ export const to_disconnect_state = (
 	el: HTMLElement | SVGElement,
 	observer: IntersectionObserver,
 ): Disconnect_State => {
-	const s = global_disconnect_state; // TODO maybe make this configurable to be immutable
+	const s = get_disconnect_state(); // TODO maybe make this configurable to be immutable
 	s.intersecting = intersecting;
 	s.intersections = intersections;
 	s.el = el;
