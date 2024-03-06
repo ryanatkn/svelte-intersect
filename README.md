@@ -70,6 +70,10 @@ For more see the
 [IntersectionObserver docs](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver) on MDN
 and the demo at [svelte-intersect.ryanatkn.com](https://svelte-intersect.ryanatkn.com/).
 
+## TODO
+
+- should the `count` API change?
+
 ## License
 
 [MIT](LICENSE)
