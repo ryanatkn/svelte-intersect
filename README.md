@@ -36,6 +36,29 @@ the [viewport](https://developer.mozilla.org/en-US/docs/Web/CSS/Viewport_concept
 All options are optional.
 
 ```ts
+export interface Intersect_Params {
+	/**
+	 * Called when the element enters or leaves the viewport until disconnected.
+	 */
+	onintersect?: On_Intersect;
+	/**
+	 * Called when the action's observer is disconnected,
+	 * either by the user calling disconnect or the action being destroyed.
+	 */
+	ondisconnect?: On_Disconnect;
+	/**
+	 * pass `1` to disconnect after `el` enters and leaves the viewport one time,
+	 * similar to 'once' for an event - disable the callback with `0`,
+	 * and never disconnect with `undefined` or a negative number like `-1`
+	 */
+	count?: number;
+	/**
+	 * Same as the `options` param to
+	 * [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#options)
+	 */
+	options?: IntersectionObserverInit;
+}
+
 export interface On_Intersect {
 	(state: Intersect_State): void;
 }
@@ -59,13 +82,6 @@ export interface Disconnect_State {
 	observer: IntersectionObserver;
 }
 ```
-
-| property        | default     | description                                                                                                                                                                                                     |
-| --------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `onintersect`   |             | called every time the element enters or leaves the viewport until the action's observer is disconnected                                                                                                         |
-| `ondisconnect?` | `undefined` | called when the action's observer is disconnected, either by the user calling disconnect or the action being destroyed                                                                                          |
-| `count?`        | `undefined` | pass `1` to disconnect after `el` enters and leaves the viewport one time, similar to 'once' for an event - disable the callback with `0`, and never disconnect with `undefined` or a negative number like `-1` |
-| `options?`      | `undefined` | the [`IntersectionObserver` options](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#options)                                                                        |
 
 For more see the
 [IntersectionObserver docs](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver) on MDN

@@ -2,21 +2,23 @@ import type {Action} from 'svelte/action';
 
 export interface Intersect_Params {
 	/**
-	 * Called when the element enters or leaves the viewport.
+	 * Called when the element enters or leaves the viewport until disconnected.
 	 */
-	onintersect: On_Intersect;
+	onintersect?: On_Intersect;
 	/**
-	 * Called either by user code or `action.destroy`.
+	 * Called when the action's observer is disconnected,
+	 * either by the user calling disconnect or the action being destroyed.
 	 */
 	ondisconnect?: On_Disconnect;
 	/**
-	 * A value of 0 disables the callback,
-	 * less than 0 or undefined makes the callback get called every time,
-	 * and greater than 1 disconnects after being triggered that many times.
+	 * pass `1` to disconnect after `el` enters and leaves the viewport one time,
+	 * similar to 'once' for an event - disable the callback with `0`,
+	 * and never disconnect with `undefined` or a negative number like `-1`
 	 */
 	count?: number;
 	/**
-	 * Same as the `options` param to `IntersectionObserver`.
+	 * Same as the `options` param to
+	 * [`IntersectionObserver`](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver#options)
 	 */
 	options?: IntersectionObserverInit;
 }
