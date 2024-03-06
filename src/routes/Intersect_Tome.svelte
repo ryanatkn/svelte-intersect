@@ -2,9 +2,15 @@
 	import Code from '@ryanatkn/fuz_code/Code.svelte';
 
 	import Demo from '$routes/Demo.svelte';
+
+	let demo_key = 0;
+
+	const reset = () => demo_key++;
+
+	// TODO maybe use ts-morph to get the type text from the source code
 </script>
 
-<section class="box prose">
+<section class="w_100 prose">
 	<h2>demo</h2>
 	<div class="mb_lg">
 		<Code lang="ts" content={`import {intersect} from 'svelte-intersect';`} />
@@ -13,15 +19,17 @@
 		<Code
 			content={`<li
 	use:intersect={{
-		cb: (intersecting, el) =>
+		onintersect: ({intersecting, intersections, el, obeserver, disconnect}) =>
 			el.classList.toggle('intersecting', intersecting),
+		ondisconnect: ({intersecting, intersections, el, obeserver}) => { /* */ },
 		count,
 		options: {threshold},
 	}}
 >`}
 		/>
 	</div>
-	<div class="width_sm p_md panel mb_lg">
+	<div class="p_md panel mb_lg">
+		<button class="mb_lg" on:click={reset}>reset state</button>
 		<details>
 			<summary>more info</summary>
 			<p>
@@ -62,9 +70,11 @@
 </section>
 <section>
 	<div class="demos">
-		<Demo />
-		<Demo threshold={1} />
-		<Demo count={1} />
+		{#key demo_key}
+			<Demo />
+			<Demo threshold={1} />
+			<Demo count={1} />
+		{/key}
 	</div>
 </section>
 

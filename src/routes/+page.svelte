@@ -31,7 +31,7 @@
 			</Card>
 			<a href="{base}/about" class="chip">about</a>
 		</section>
-		<section>
+		<section class="w_100">
 			<Intersect_Tome />
 		</section>
 		<section>
