@@ -48,21 +48,21 @@
 	.demo {
 		display: flex;
 		flex-direction: column;
-		gap: var(--spacing_lg);
+		gap: var(--space_lg);
 	}
 	ul {
 		width: 100%;
 	}
 	li {
 		width: 100%;
-		padding: var(--spacing_1);
-		background-color: hsla(var(--hue_7), 50%, 80%, 0.3);
+		padding: var(--space_xl);
+		background-color: hsla(var(--hue_g), 50%, 80%, 0.3);
 		font-weight: 900;
 		transition: background-color var(--duration_2);
 	}
 	li:global(.intersecting) {
-		color: var(--color_6);
-		background-color: hsla(var(--hue_6), 50%, 80%, 0.15);
+		color: var(--color_f_5);
+		background-color: hsla(var(--hue_f), 50%, 80%, 0.15);
 	}
 	.threshold,
 	.count {
