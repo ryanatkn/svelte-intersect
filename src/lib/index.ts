@@ -11,9 +11,9 @@ export interface Intersect_Params {
 	 */
 	ondisconnect?: On_Disconnect;
 	/**
-	 * pass `1` to disconnect after `el` enters and leaves the viewport one time,
-	 * similar to 'once' for an event - disable the callback with `0`,
-	 * and never disconnect with `undefined` or a negative number like `-1`
+	 * A value of `1` disconnects after `el` enters and leaves the viewport one time,
+	 * similar to 'once' for an event.
+	 * `0` disables and `undefined` or a negative number like `-1` never disconnects.
 	 */
 	count?: number;
 	/**
