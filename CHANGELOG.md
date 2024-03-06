@@ -1,5 +1,11 @@
 # svelte-intersect
 
+## 0.12.0
+
+### Minor Changes
+
+- improve API ([#7](https://github.com/ryanatkn/svelte-intersect/pull/7))
+
 ## 0.11.0
 
 ### Minor Changes
