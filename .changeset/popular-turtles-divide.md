@@ -1,5 +1,5 @@
 ---
-"svelte-intersect": patch
+'svelte-intersect': minor
 ---
 
 improve API
