@@ -2,6 +2,10 @@
 	import Code from '@ryanatkn/fuz_code/Code.svelte';
 
 	import Demo from '$routes/Demo.svelte';
+
+	let demo_key = 0;
+
+	const reset = () => demo_key++;
 </script>
 
 <section class="box prose">
@@ -22,6 +26,7 @@
 		/>
 	</div>
 	<div class="width_sm p_md panel mb_lg">
+		<button on:click={reset}>reset state</button>
 		<details>
 			<summary>more info</summary>
 			<p>
@@ -62,9 +67,11 @@
 </section>
 <section>
 	<div class="demos">
-		<Demo />
-		<Demo threshold={1} />
-		<Demo count={1} />
+		{#key demo_key}
+			<Demo />
+			<Demo threshold={1} />
+			<Demo count={1} />
+		{/key}
 	</div>
 </section>
 

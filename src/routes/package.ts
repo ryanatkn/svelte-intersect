@@ -66,10 +66,17 @@ export const src_json = {
 		'.': {
 			path: 'index.ts',
 			declarations: [
-				{name: 'Intersect_Callback', kind: 'type'},
 				{name: 'Intersect_Params', kind: 'type'},
 				{name: 'Intersect_Params_Or_Callback', kind: 'type'},
 				{name: 'intersect', kind: 'function'},
+				{name: 'On_Intersect', kind: 'type'},
+				{name: 'Intersect_State', kind: 'type'},
+				{name: 'get_intersect_state', kind: 'function'},
+				{name: 'to_intersect_state', kind: 'function'},
+				{name: 'On_Disconnect', kind: 'type'},
+				{name: 'Disconnect_State', kind: 'type'},
+				{name: 'get_disconnect_state', kind: 'function'},
+				{name: 'to_disconnect_state', kind: 'function'},
 			],
 		},
 	},

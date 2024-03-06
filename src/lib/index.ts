@@ -1,19 +1,14 @@
 import type {Action} from 'svelte/action';
 
-export interface Intersect_Callback {
-	(
-		intersecting: boolean,
-		el: HTMLElement | SVGElement,
-		disconnect: () => void,
-		intersections: number,
-	): void; // TODO how to forward generic `el` type?
-}
-
 export interface Intersect_Params {
 	/**
 	 * Called when the element enters or leaves the viewport.
 	 */
-	cb: Intersect_Callback;
+	onintersect: On_Intersect;
+	/**
+	 * Called either by user code or `action.destroy`.
+	 */
+	ondisconnect?: On_Disconnect;
 	/**
 	 * A value of 0 disables the callback,
 	 * less than 0 or undefined makes the callback get called every time,
@@ -26,27 +21,32 @@ export interface Intersect_Params {
 	options?: IntersectionObserverInit;
 }
 
-export type Intersect_Params_Or_Callback = Intersect_Callback | Intersect_Params;
+export type Intersect_Params_Or_Callback = On_Intersect | Intersect_Params;
 
 // TODO how to forward generic `el` type?
 export const intersect: Action<HTMLElement | SVGElement, Intersect_Params_Or_Callback> = (
 	el,
 	initial_params,
 ) => {
-	let cb: Intersect_Callback;
+	let onintersect: On_Intersect | undefined;
+	let ondisconnect: On_Disconnect | undefined;
 	let count: number | undefined;
 	let options: IntersectionObserverInit | undefined;
+	let intersecting: boolean;
 	let intersections: number;
 	let observer: IntersectionObserver | null;
 
 	const set_params = (params: Intersect_Params_Or_Callback): void => {
+		// TODO not sure about this? should there be a `reset` API?
 		intersections = 0;
 		if (typeof params === 'function') {
-			cb = params;
+			onintersect = params;
+			ondisconnect = undefined;
 			count = undefined;
 			options = undefined;
 		} else {
-			cb = params.cb;
+			onintersect = params.onintersect;
+			ondisconnect = params.ondisconnect;
 			count = params.count;
 			options = params.options;
 		}
@@ -54,14 +54,19 @@ export const intersect: Action<HTMLElement | SVGElement, Intersect_Params_Or_Cal
 	const disconnect = (): void => {
 		if (!observer) return;
 		observer.disconnect();
+		if (ondisconnect) {
+			ondisconnect(to_disconnect_state(intersecting, intersections, el, observer));
+		}
 		observer = null;
 	};
 	const observe = (): void => {
 		if (observer) disconnect();
 		if (count === 0) return; // disable when `count` is `0`, no need to create the observer
 		observer = new IntersectionObserver((entries) => {
-			const intersecting = entries[0].isIntersecting;
-			cb(intersecting, el, disconnect, intersections); // TODO BLOCK this is the old intersections count, but should the `cb` be called after disonnecting, and that state be included?
+			intersecting = entries[0].isIntersecting;
+			if (onintersect) {
+				onintersect(to_intersect_state(intersecting, intersections, el, disconnect));
+			}
 			if (intersecting) {
 				// track each the count of times it enters the viewport
 				intersections++;
@@ -85,4 +90,76 @@ export const intersect: Action<HTMLElement | SVGElement, Intersect_Params_Or_Cal
 		},
 		destroy: disconnect,
 	};
+};
+
+export interface On_Intersect {
+	(state: Intersect_State): void; // TODO how to forward generic `el` type?
+}
+
+export interface Intersect_State {
+	intersecting: boolean;
+	intersections: number;
+	el: HTMLElement | SVGElement;
+	disconnect: () => void;
+}
+
+const global_intersect_state: Intersect_State = {
+	intersecting: undefined as any,
+	intersections: undefined as any,
+	el: undefined as any,
+	disconnect: undefined as any,
+};
+
+// TODO does this work?
+// eslint-disable-next-line prefer-const
+export let get_intersect_state = (): Intersect_State => global_intersect_state;
+
+export const to_intersect_state = (
+	intersecting: boolean,
+	intersections: number,
+	el: HTMLElement | SVGElement,
+	disconnect: () => void,
+): Intersect_State => {
+	const s = global_intersect_state; // TODO maybe make this configurable to be immutable
+	s.intersecting = intersecting;
+	s.intersections = intersections;
+	s.el = el;
+	s.disconnect = disconnect;
+	return s;
+};
+
+export interface On_Disconnect {
+	(state: Disconnect_State): void; // TODO how to forward generic `el` type?
+}
+
+export interface Disconnect_State {
+	intersecting: boolean;
+	intersections: number;
+	el: HTMLElement | SVGElement;
+	observer: IntersectionObserver;
+}
+
+const global_disconnect_state: Disconnect_State = {
+	intersecting: undefined as any,
+	intersections: undefined as any,
+	el: undefined as any,
+	observer: undefined as any,
+};
+
+// TODO does this work?
+// eslint-disable-next-line prefer-const
+export let get_disconnect_state = (): Disconnect_State => global_disconnect_state;
+
+export const to_disconnect_state = (
+	intersecting: boolean,
+	intersections: number,
+	el: HTMLElement | SVGElement,
+	observer: IntersectionObserver,
+): Disconnect_State => {
+	const s = global_disconnect_state; // TODO maybe make this configurable to be immutable
+	s.intersecting = intersecting;
+	s.intersections = intersections;
+	s.el = el;
+	s.observer = observer;
+	return s;
 };
