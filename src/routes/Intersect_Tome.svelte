@@ -10,7 +10,7 @@
 	// TODO maybe use ts-morph to get the type text from the source code
 </script>
 
-<section class="box prose">
+<section class="w_100 prose">
 	<h2>demo</h2>
 	<div class="mb_lg">
 		<Code lang="ts" content={`import {intersect} from 'svelte-intersect';`} />
@@ -28,8 +28,8 @@
 >`}
 		/>
 	</div>
-	<div class="width_sm p_md panel mb_lg">
-		<button on:click={reset}>reset state</button>
+	<div class="p_md panel mb_lg">
+		<button class="mb_lg" on:click={reset}>reset state</button>
 		<details>
 			<summary>more info</summary>
 			<p>
