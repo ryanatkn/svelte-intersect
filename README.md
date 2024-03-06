@@ -36,7 +36,7 @@ All options are optional.
 
 ```ts
 export interface On_Intersect {
-	(state: Intersect_State): void; // TODO how to forward generic `el` type?
+	(state: Intersect_State): void;
 }
 
 export interface Intersect_State {
@@ -48,7 +48,7 @@ export interface Intersect_State {
 }
 
 export interface On_Disconnect {
-	(state: Disconnect_State): void; // TODO how to forward generic `el` type?
+	(state: Disconnect_State): void;
 }
 
 export interface Disconnect_State {
