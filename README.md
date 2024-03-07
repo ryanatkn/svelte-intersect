@@ -29,7 +29,7 @@ the [viewport](https://developer.mozilla.org/en-US/docs/Web/CSS/Viewport_concept
   onintersect: ({intersecting, intersections, el, observer, disconnect}) => /* `On_Intersect` */,
   ondisconnect: ({intersecting, intersections, el, observer}) => /* `On_Disconnect` */,
   count: 1, // 1 is like 'once', 0 disables, <0 or undefined is infinite
-  options: {threshold, root, rootMagin}, // IntersectionObserver options
+  options: {threshold, root, rootMagin}, // `IntersectionObserver` options
 }}>
 ```
 
