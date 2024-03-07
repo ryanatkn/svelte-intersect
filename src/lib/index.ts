@@ -57,7 +57,7 @@ export const intersect: Action<HTMLElement | SVGElement, Intersect_Params_Or_Cal
 		if (!observer) return;
 		observer.disconnect();
 		if (ondisconnect) {
-			ondisconnect(to_disconnect_state(intersecting, intersections, el, observer));
+			ondisconnect({intersecting, intersections, el, observer});
 		}
 		observer = null;
 	};
@@ -70,7 +70,7 @@ export const intersect: Action<HTMLElement | SVGElement, Intersect_Params_Or_Cal
 		observer = new IntersectionObserver((entries) => {
 			intersecting = entries[0].isIntersecting;
 			if (onintersect && observer) {
-				onintersect(to_intersect_state(intersecting, intersections, el, observer, disconnect));
+				onintersect({intersecting, intersections, el, observer, disconnect});
 			}
 			if (intersecting) {
 				// track each the count of times it enters the viewport
@@ -109,41 +109,6 @@ export interface Intersect_State {
 	disconnect: () => void;
 }
 
-const global_intersect_state: Intersect_State = {
-	intersecting: undefined as any,
-	intersections: undefined as any,
-	el: undefined as any,
-	observer: undefined as any,
-	disconnect: undefined as any,
-};
-
-let get_intersect_state = (): Intersect_State => global_intersect_state;
-
-/**
- * Sets the getter for an empty `Intersect_State` object.
- * By default a global instance is reused.
- * @param get_state
- */
-export const set_get_intersect_state = (get_state: () => Intersect_State): void => {
-	get_intersect_state = get_state;
-};
-
-export const to_intersect_state = (
-	intersecting: boolean,
-	intersections: number,
-	el: HTMLElement | SVGElement,
-	observer: IntersectionObserver,
-	disconnect: () => void,
-): Intersect_State => {
-	const s = get_intersect_state();
-	s.intersecting = intersecting;
-	s.intersections = intersections;
-	s.el = el;
-	s.observer = observer;
-	s.disconnect = disconnect;
-	return s;
-};
-
 export interface On_Disconnect {
 	(state: Disconnect_State): void; // TODO how to forward generic `el` type?
 }
@@ -154,35 +119,3 @@ export interface Disconnect_State {
 	el: HTMLElement | SVGElement;
 	observer: IntersectionObserver;
 }
-
-const global_disconnect_state: Disconnect_State = {
-	intersecting: undefined as any,
-	intersections: undefined as any,
-	el: undefined as any,
-	observer: undefined as any,
-};
-
-let get_disconnect_state = (): Disconnect_State => global_disconnect_state;
-
-/**
- * Sets the getter for an empty `Disconnect_State` object.
- * By default a global instance is reused.
- * @param get_state
- */
-export const set_get_disconnect_state = (get_state: () => Disconnect_State): void => {
-	get_disconnect_state = get_state;
-};
-
-export const to_disconnect_state = (
-	intersecting: boolean,
-	intersections: number,
-	el: HTMLElement | SVGElement,
-	observer: IntersectionObserver,
-): Disconnect_State => {
-	const s = get_disconnect_state(); // TODO maybe make this configurable to be immutable
-	s.intersecting = intersecting;
-	s.intersections = intersections;
-	s.el = el;
-	s.observer = observer;
-	return s;
-};

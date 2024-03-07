@@ -1,13 +1,5 @@
 <script lang="ts">
-	import {intersect, set_get_intersect_state} from '$lib/index.js';
-
-	set_get_intersect_state(() => ({
-		intersecting: undefined as any,
-		intersections: undefined as any,
-		el: undefined as any,
-		observer: undefined as any,
-		disconnect: undefined as any,
-	}));
+	import {intersect} from '$lib/index.js';
 
 	export let threshold = 0;
 	export let count = -1;

@@ -26,8 +26,8 @@ the [viewport](https://developer.mozilla.org/en-US/docs/Web/CSS/Viewport_concept
 
 ```svelte
 <div use:intersect={{
-  onintersect: ({intersecting, intersections, el, observer, disconnect}) => /* `On_Intersect` */,
-  ondisconnect: ({intersecting, intersections, el, observer}) => /* `On_Disconnect` */,
+  onintersect: ({intersecting, intersections, el, observer, disconnect}) => void,
+  ondisconnect: ({intersecting, intersections, el, observer}) => void,
   count: 1, // 1 is like 'once', 0 disables, <0 or undefined is infinite
   options: {threshold, root, rootMagin}, // `IntersectionObserver` options
 }}>
