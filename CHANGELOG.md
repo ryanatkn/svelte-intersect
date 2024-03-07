@@ -1,5 +1,11 @@
 # svelte-intersect
 
+## 0.12.1
+
+### Patch Changes
+
+- stop reusing event objects ([47d9d62](https://github.com/ryanatkn/svelte-intersect/commit/47d9d62))
+
 ## 0.12.0
 
 ### Minor Changes
