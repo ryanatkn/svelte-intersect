@@ -54,7 +54,8 @@
 				disconnect.
 			</p>
 			<p>
-				A <code>count</code> of <code>0</code> makes the callback never trigger.
+				A <code>count</code> of <code>0</code> disables <code>onintersect</code> and never creates
+				the <code>IntersectionObserver</code>.
 			</p>
 			<p>
 				Demo source code: <a
