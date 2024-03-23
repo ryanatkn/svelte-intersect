@@ -11,7 +11,7 @@
 </script>
 
 <svelte:head>
-	<title>svelte-intersect.ryanatkn.com</title>
+	<title>ryanatkn.github.io/svelte-intersect</title>
 </svelte:head>
 
 <Themed>

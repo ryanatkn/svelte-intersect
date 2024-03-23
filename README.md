@@ -3,7 +3,7 @@
 > a [Svelte action](https://svelte.dev/docs/svelte-action) for
 > [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver)
 
-- demo: [svelte-intersect.ryanatkn.com](https://svelte-intersect.ryanatkn.com/)
+- demo: [ryanatkn.github.io/svelte-intersect](https://ryanatkn.github.io/svelte-intersect/)
 - npm: [`svelte-intersect`](https://www.npmjs.com/package/svelte-intersect)
 - Svelte [repl](https://svelte.dev/repl/fad8afe445344c6ab38caea752a3dec5?version=4.1.2)
 - todo
@@ -85,7 +85,7 @@ export interface Disconnect_State {
 
 For more see the
 [IntersectionObserver docs](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver)
-on MDN, the demo at [svelte-intersect.ryanatkn.com](https://svelte-intersect.ryanatkn.com/),
+on MDN, the demo at [ryanatkn.github.io/svelte-intersect](https://ryanatkn.github.io/svelte-intersect/),
 and [the implementation](/src/lib/index.ts).
 
 ## License

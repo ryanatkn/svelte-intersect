@@ -10,7 +10,7 @@ export const package_json = {
 	public: true,
 	license: 'MIT',
 	type: 'module',
-	homepage: 'https://svelte-intersect.ryanatkn.com/',
+	homepage: 'https://ryanatkn.github.io/svelte-intersect/',
 	repository: 'https://github.com/ryanatkn/svelte-intersect',
 	engines: {node: '>=20.10'},
 	scripts: {

@@ -29,7 +29,7 @@
 ### Minor Changes
 
 - move to `svelte-intersect` from `@ryanatkn/svelte_intersect` ([50ccf4c](https://github.com/ryanatkn/svelte-intersect/commit/50ccf4c))
-  and [svelte-intersect.ryanatkn.com](https://svelte-intersect.ryanatkn.com/)
+  and [ryanatkn.github.io/svelte-intersect](https://ryanatkn.github.io/svelte-intersect/)
   from intersect.ryanatkn.com
 
 ## 0.8.0
