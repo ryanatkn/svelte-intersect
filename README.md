@@ -8,7 +8,7 @@
 - Svelte [repl](https://svelte.dev/repl/fad8afe445344c6ab38caea752a3dec5?version=4.1.2)
 - todo
   - figure out how to make the `el` type inferred/generic
-  - does the API need any tweaks?
+  - does the API need any tweaks? (the negative `count` never disconnecting may be undesirable)
 
 ## Usage
 
