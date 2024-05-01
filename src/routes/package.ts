@@ -25,7 +25,7 @@ export const package_json = {
 		deploy: 'gro deploy',
 	},
 	files: ['dist'],
-	peerDependencies: {svelte: '^5'},
+	peerDependencies: {svelte: '^5.0.0-next.0'},
 	devDependencies: {
 		'@changesets/changelog-git': '^0.2.0',
 		'@ryanatkn/belt': '^0.20.10',
