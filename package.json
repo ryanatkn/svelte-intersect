@@ -29,7 +29,7 @@
     "dist"
   ],
   "peerDependencies": {
-    "svelte": "*"
+    "svelte": "^5"
   },
   "devDependencies": {
     "@changesets/changelog-git": "^0.2.0",
