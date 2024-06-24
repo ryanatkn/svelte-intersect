@@ -1,13 +1,17 @@
 <script lang="ts">
 	import {intersect} from '$lib/index.js';
 
-	export let threshold = 0;
-	export let count = -1;
-	export let items_count = 100;
+	interface Props {
+		threshold?: number;
+		count?: number;
+		items_count?: number;
+	}
+
+	let {threshold = $bindable(0), count = $bindable(-1), items_count = 55}: Props = $props(); // eslint-disable-line prefer-const
 
 	// TODO use viewport dimensions to make the height a fixed multiple of the viewport height
 
-	$: items = Array.from({length: items_count}, (_, i) => i);
+	const items = $derived(Array.from({length: items_count}, (_, i) => i));
 </script>
 
 <div class="demo">
@@ -76,7 +80,6 @@
 	.threshold,
 	.count {
 		display: flex;
-		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
 	}

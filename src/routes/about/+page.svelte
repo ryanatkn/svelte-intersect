@@ -12,9 +12,9 @@
 </script>
 
 <main class="width_md">
-	<section>
+	<section class="box">
 		<header>
-			<h1>{pkg.repo_name}</h1>
+			<h1 class="my_xl3">{pkg.repo_name}</h1>
 		</header>
 		<Breadcrumb>🧶</Breadcrumb>
 	</section>

@@ -15,10 +15,15 @@
 	const pkg = parse_package_meta(package_json.homepage, package_json, src_json);
 </script>
 
-<main class="box w_100">
-	<div class="box width_md">
+<main class="box mb_xl7">
+	<div class="box width_md px_md">
 		<section>
-			<Package_Summary {pkg} />
+			<header class="box">
+				<h1 class="my_xl3">svelte-intersect</h1>
+				<Package_Summary {pkg} pixelated_logo>
+					{#snippet repo_name()}{/snippet}
+				</Package_Summary>
+			</header>
 		</section>
 		<section class="box">
 			<Card
@@ -28,26 +33,9 @@
 				{#snippet icon()}{/snippet}
 				docs
 			</Card>
-			<a href="{base}/about" class="chip">about</a>
+			<a href="{base}/about" class="chip mt_xl3">about</a>
 		</section>
-		<section class="w_100">
-			<Intersect_Tome />
-		</section>
-		<section>
-			<Library_Footer {pkg} root_url="https://www.ryanatkn.com/" />
-		</section>
+		<Intersect_Tome />
+		<Library_Footer {pkg} root_url="https://www.ryanatkn.com/" />
 	</div>
 </main>
-
-<style>
-	main {
-		margin-bottom: var(--space_xl5);
-		padding: var(--space_xl3) 0;
-	}
-	section {
-		margin-bottom: var(--space_xl5);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-</style>
