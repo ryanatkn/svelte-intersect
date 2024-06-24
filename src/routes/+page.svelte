@@ -16,7 +16,7 @@
 </script>
 
 <main class="box mb_xl7">
-	<div class="box width_md px_md">
+	<div class="width_md px_md">
 		<section>
 			<header class="box">
 				<h1 class="my_xl3">svelte-intersect</h1>

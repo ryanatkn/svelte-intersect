@@ -1,13 +1,22 @@
 <script lang="ts">
 	import {intersect} from '$lib/index.js';
 
+	const get_initial_count = (): number => {
+		if (typeof window === 'undefined') return 51;
+		return window.innerHeight / 30;
+	};
+
 	interface Props {
 		threshold?: number;
 		count?: number;
 		items_count?: number;
 	}
 
-	let {threshold = $bindable(0), count = $bindable(-1), items_count = 55}: Props = $props(); // eslint-disable-line prefer-const
+	let {
+		threshold = $bindable(0),
+		count = $bindable(-1),
+		items_count = get_initial_count(), // eslint-disable-line prefer-const
+	}: Props = $props();
 
 	// TODO use viewport dimensions to make the height a fixed multiple of the viewport height
 
