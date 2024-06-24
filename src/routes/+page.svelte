@@ -3,56 +3,39 @@
 	import 'prism-svelte';
 	import '@ryanatkn/fuz_code/prism.css';
 
-	import Library_Header from '@ryanatkn/fuz/Library_Header.svelte';
+	import Package_Summary from '@ryanatkn/fuz/Package_Summary.svelte';
 	import Library_Footer from '@ryanatkn/fuz/Library_Footer.svelte';
 	import Card from '@ryanatkn/fuz/Card.svelte';
 	import {parse_package_meta} from '@ryanatkn/gro/package_meta.js';
 	import {base} from '$app/paths';
-	import {page} from '$app/stores';
 
 	import Intersect_Tome from '$routes/Intersect_Tome.svelte';
 	import {package_json, src_json} from '$routes/package.js';
 
 	const pkg = parse_package_meta(package_json.homepage, package_json, src_json);
-
-	console.log('base', base);
-	$: console.log('$page.url.pathname', $page.url.pathname);
 </script>
 
-<main class="box w_100">
-	<div class="box width_md">
+<main class="box mb_xl7">
+	<div class="width_md px_lg">
 		<section>
-			<Library_Header {pkg} />
+			<header class="box">
+				<h1 class="my_xl3">svelte-intersect</h1>
+				<Package_Summary {pkg} pixelated_logo>
+					{#snippet repo_name()}{/snippet}
+				</Package_Summary>
+			</header>
 		</section>
 		<section class="box">
 			<Card
 				href="https://github.com/ryanatkn/svelte-intersect#readme"
 				attrs={{class: 'card mb_lg'}}
 			>
-				<!-- TODO Svelte5 fix api with snippets, conditionally render if provided -->
-				<div slot="icon"></div>
+				{#snippet icon()}{/snippet}
 				docs
 			</Card>
-			<a href="{base}/about" class="chip">about</a>
+			<a href="{base}/about" class="chip mt_xl3">about</a>
 		</section>
-		<section class="w_100">
-			<Intersect_Tome />
-		</section>
-		<section>
-			<Library_Footer {pkg} root_url="https://www.ryanatkn.com/" />
-		</section>
+		<Intersect_Tome />
+		<Library_Footer {pkg} root_url="https://www.ryanatkn.com/" />
 	</div>
 </main>
-
-<style>
-	main {
-		margin-bottom: var(--space_xl5);
-		padding: var(--space_xl3) 0;
-	}
-	section {
-		margin-bottom: var(--space_xl5);
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-</style>

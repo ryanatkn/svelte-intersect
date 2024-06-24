@@ -64,7 +64,6 @@ export const intersect: Action<HTMLElement | SVGElement, Intersect_Params_Or_Cal
 	const observe = (): void => {
 		if (observer) {
 			disconnect();
-			observer = null;
 		}
 		if (count === 0) return; // disable when `count` is `0`, no need to create the observer
 		observer = new IntersectionObserver((entries) => {
