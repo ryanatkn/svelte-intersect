@@ -1,5 +1,11 @@
 # svelte-intersect
 
+## 0.13.0
+
+### Minor Changes
+
+- upgrade `node@22.3` and improve the demo ([#8](https://github.com/ryanatkn/svelte-intersect/pull/8))
+
 ## 0.12.1
 
 ### Patch Changes
