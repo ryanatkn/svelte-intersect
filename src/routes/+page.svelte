@@ -3,34 +3,29 @@
 	import 'prism-svelte';
 	import '@ryanatkn/fuz_code/prism.css';
 
-	import Library_Header from '@ryanatkn/fuz/Library_Header.svelte';
+	import Package_Summary from '@ryanatkn/fuz/Package_Summary.svelte';
 	import Library_Footer from '@ryanatkn/fuz/Library_Footer.svelte';
 	import Card from '@ryanatkn/fuz/Card.svelte';
 	import {parse_package_meta} from '@ryanatkn/gro/package_meta.js';
 	import {base} from '$app/paths';
-	import {page} from '$app/stores';
 
 	import Intersect_Tome from '$routes/Intersect_Tome.svelte';
 	import {package_json, src_json} from '$routes/package.js';
 
 	const pkg = parse_package_meta(package_json.homepage, package_json, src_json);
-
-	console.log('base', base);
-	$: console.log('$page.url.pathname', $page.url.pathname);
 </script>
 
 <main class="box w_100">
 	<div class="box width_md">
 		<section>
-			<Library_Header {pkg} />
+			<Package_Summary {pkg} />
 		</section>
 		<section class="box">
 			<Card
 				href="https://github.com/ryanatkn/svelte-intersect#readme"
 				attrs={{class: 'card mb_lg'}}
 			>
-				<!-- TODO Svelte5 fix api with snippets, conditionally render if provided -->
-				<div slot="icon"></div>
+				{#snippet icon()}{/snippet}
 				docs
 			</Card>
 			<a href="{base}/about" class="chip">about</a>
