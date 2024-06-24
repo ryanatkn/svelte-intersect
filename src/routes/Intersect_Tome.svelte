@@ -3,7 +3,7 @@
 
 	import Demo from '$routes/Demo.svelte';
 
-	let demo_key = 0;
+	let demo_key = $state(0);
 
 	const reset = () => demo_key++;
 
@@ -29,7 +29,7 @@
 		/>
 	</div>
 	<div class="p_md panel mb_lg">
-		<button class="mb_lg" on:click={reset}>reset state</button>
+		<button class="mb_lg" onclick={reset}>reset state</button>
 		<details>
 			<summary>more info</summary>
 			<p>
