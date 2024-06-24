@@ -3,28 +3,21 @@
 	import {parse_package_meta} from '@ryanatkn/gro/package_meta.js';
 	import Library_Footer from '@ryanatkn/fuz/Library_Footer.svelte';
 	import Breadcrumb from '@ryanatkn/fuz/Breadcrumb.svelte';
-	import {base} from '$app/paths';
-	import {page} from '$app/stores';
 
 	import {package_json, src_json} from '$routes/package.js';
 
 	const pkg = parse_package_meta(package_json.homepage, package_json, src_json);
 
-	console.log('base', base);
-	$: console.log('$page.url.pathname', $page.url.pathname);
-
 	// TODO standardize
 </script>
 
 <main class="width_md">
-	<div class="prose">
-		<section>
-			<header>
-				<h1>{pkg.repo_name}</h1>
-			</header>
-			<Breadcrumb>🧶</Breadcrumb>
-		</section>
-	</div>
+	<section>
+		<header>
+			<h1>{pkg.repo_name}</h1>
+		</header>
+		<Breadcrumb>🧶</Breadcrumb>
+	</section>
 	<section class="box w_100 mb_lg">
 		<div class="panel p_md width_md">
 			<Package_Detail {pkg} />

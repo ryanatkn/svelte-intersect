@@ -10,7 +10,7 @@
 	// TODO maybe use ts-morph to get the type text from the source code
 </script>
 
-<section class="w_100 prose">
+<section class="w_100">
 	<h2>demo</h2>
 	<div class="mb_lg">
 		<Code lang="ts" content={`import {intersect} from 'svelte-intersect';`} />
