@@ -1,5 +1,11 @@
 # svelte-intersect
 
+## 0.14.0
+
+### Minor Changes
+
+- support `node@20.12` and later ([424f7b0](https://github.com/ryanatkn/svelte-intersect/commit/424f7b0))
+
 ## 0.13.0
 
 ### Minor Changes
