@@ -1,5 +1,11 @@
 # svelte-intersect
 
+## 0.14.1
+
+### Patch Changes
+
+- upgrade gro with correctly formatted exports ([52f6c39](https://github.com/ryanatkn/svelte-intersect/commit/52f6c39))
+
 ## 0.14.0
 
 ### Minor Changes
