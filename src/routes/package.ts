@@ -24,7 +24,6 @@ export const package_json = {
 		test: 'gro test',
 		deploy: 'gro deploy',
 	},
-	files: ['dist'],
 	peerDependencies: {svelte: '^5.0.0-next.0'},
 	devDependencies: {
 		'@changesets/changelog-git': '^0.2.0',
@@ -61,6 +60,8 @@ export const package_json = {
 		bracketSpacing: false,
 		overrides: [{files: 'package.json', options: {useTabs: false}}],
 	},
+	sideEffects: ['**/*.css'],
+	files: ['dist'],
 	exports: {
 		'.': {types: './dist/index.d.ts', default: './dist/index.js'},
 		'./package.json': './package.json',

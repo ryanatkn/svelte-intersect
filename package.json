@@ -25,9 +25,6 @@
     "test": "gro test",
     "deploy": "gro deploy"
   },
-  "files": [
-    "dist"
-  ],
   "peerDependencies": {
     "svelte": "^5.0.0-next.0"
   },
@@ -78,6 +75,12 @@
       }
     ]
   },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
