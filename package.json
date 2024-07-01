@@ -1,9 +1,11 @@
 {
   "name": "svelte-intersect",
-  "description": "a Svelte action for IntersectionObserver",
   "version": "0.14.1",
+  "description": "a Svelte action for IntersectionObserver",
   "license": "MIT",
   "glyph": "💠",
+  "logo": "logo.svg",
+  "logo_alt": "a friendly pixelated spider facing you",
   "public": true,
   "homepage": "https://ryanatkn.github.io/svelte-intersect/",
   "repository": "https://github.com/ryanatkn/svelte-intersect",
@@ -14,16 +16,16 @@
   },
   "bugs": "https://github.com/ryanatkn/svelte-intersect/issues",
   "funding": "https://www.ryanatkn.com/funding",
-  "type": "module",
-  "engines": {
-    "node": ">=20.12"
-  },
   "scripts": {
     "start": "gro dev",
     "dev": "gro dev",
     "build": "gro build",
     "test": "gro test",
     "deploy": "gro deploy"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=20.12"
   },
   "peerDependencies": {
     "svelte": "^5.0.0-next.0"
