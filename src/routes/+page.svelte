@@ -20,7 +20,7 @@
 		<section>
 			<header class="box">
 				<h1 class="my_xl3">svelte-intersect</h1>
-				<Package_Summary {pkg} pixelated_logo>
+				<Package_Summary {pkg}>
 					{#snippet repo_name()}{/snippet}
 				</Package_Summary>
 			</header>
