@@ -63,7 +63,7 @@
 	<p></p>
 </section>
 <section class="box">
-	<button class="mb_lg" onclick={reset}>reset state</button>
+	<button type="button" class="mb_lg" onclick={reset}>reset state</button>
 </section>
 <section class="w_100">
 	<div class="box row gap_lg wrap">
