@@ -15,7 +15,7 @@
 	let {
 		threshold = $bindable(0),
 		count = $bindable(-1),
-		items_count = get_initial_count(), // eslint-disable-line prefer-const
+		items_count = get_initial_count(),
 	}: Props = $props();
 
 	// TODO use viewport dimensions to make the height a fixed multiple of the viewport height
@@ -49,10 +49,10 @@
 					onintersect: (params) => {
 						const {intersecting, el} = params;
 						el.classList.toggle('intersecting', intersecting);
-						console.log(`onintersect params`, params);
+						console.log(`onintersect params`, params); // eslint-disable-line no-console
 					},
 					ondisconnect: (params) => {
-						console.log(`ondisconnect params`, params);
+						console.log(`ondisconnect params`, params); // eslint-disable-line no-console
 					},
 					count,
 					options: {threshold},
