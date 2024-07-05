@@ -15,7 +15,7 @@
 	let {
 		threshold = $bindable(0),
 		count = $bindable(-1),
-		items_count = get_initial_count(), // eslint-disable-line prefer-const
+		items_count = get_initial_count(),
 	}: Props = $props();
 
 	// TODO use viewport dimensions to make the height a fixed multiple of the viewport height
