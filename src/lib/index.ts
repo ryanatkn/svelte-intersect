@@ -96,9 +96,8 @@ export const intersect: Action<HTMLElement | SVGElement, Intersect_Params_Or_Cal
 	};
 };
 
-export interface On_Intersect {
-	(state: Intersect_State): void; // TODO how to forward generic `el` type?
-}
+// TODO how to forward generic `el` type?
+export type On_Intersect = (state: Intersect_State) => void;
 
 export interface Intersect_State {
 	intersecting: boolean;
@@ -108,9 +107,8 @@ export interface Intersect_State {
 	disconnect: () => void;
 }
 
-export interface On_Disconnect {
-	(state: Disconnect_State): void; // TODO how to forward generic `el` type?
-}
+// TODO how to forward generic `el` type?
+export type On_Disconnect = (state: Disconnect_State) => void;
 
 export interface Disconnect_State {
 	intersecting: boolean;

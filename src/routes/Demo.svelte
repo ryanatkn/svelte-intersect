@@ -49,10 +49,10 @@
 					onintersect: (params) => {
 						const {intersecting, el} = params;
 						el.classList.toggle('intersecting', intersecting);
-						console.log(`onintersect params`, params);
+						console.log(`onintersect params`, params); // eslint-disable-line no-console
 					},
 					ondisconnect: (params) => {
-						console.log(`ondisconnect params`, params);
+						console.log(`ondisconnect params`, params); // eslint-disable-line no-console
 					},
 					count,
 					options: {threshold},
