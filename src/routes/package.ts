@@ -5,7 +5,7 @@ import type {Src_Json} from '@ryanatkn/gro/src_json.js';
 
 export const package_json = {
 	name: 'svelte-intersect',
-	version: '0.14.1',
+	version: '0.14.2',
 	description: 'a Svelte action for IntersectionObserver',
 	license: 'MIT',
 	glyph: '💠',
@@ -72,7 +72,7 @@ export const package_json = {
 
 export const src_json = {
 	name: 'svelte-intersect',
-	version: '0.14.1',
+	version: '0.14.2',
 	modules: {
 		'.': {
 			path: 'index.ts',

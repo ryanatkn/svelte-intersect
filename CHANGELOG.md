@@ -1,5 +1,14 @@
 # svelte-intersect
 
+## 0.14.2
+
+### Patch Changes
+
+- enable tsconfig `declaration` and `declarationMap` ([5a708db](https://github.com/ryanatkn/svelte-intersect/commit/5a708db))
+- add tsconfig `sourceRoot` ([9958e30](https://github.com/ryanatkn/svelte-intersect/commit/9958e30))
+- publish src files ([6f5979d](https://github.com/ryanatkn/svelte-intersect/commit/6f5979d))
+- add `sideEffects` to `package.json` ([858cac2](https://github.com/ryanatkn/svelte-intersect/commit/858cac2))
+
 ## 0.14.1
 
 ### Patch Changes
