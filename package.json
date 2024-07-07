@@ -78,7 +78,10 @@
     "**/*.css"
   ],
   "files": [
-    "dist"
+    "dist",
+    "src/lib/**/*.ts",
+    "!src/lib/**/*.test.*",
+    "!dist/**/*.test.*"
   ],
   "exports": {
     ".": {
