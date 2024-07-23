@@ -66,7 +66,7 @@
 	<button type="button" class="mb_lg" onclick={reset}>reset state</button>
 </section>
 <section class="w_100">
-	<div class="box row gap_lg wrap">
+	<div class="box row gap_lg flex_wrap">
 		{#key demo_key}
 			<Demo />
 			<Demo threshold={1} />
