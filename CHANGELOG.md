@@ -1,5 +1,11 @@
 # svelte-intersect
 
+## 0.15.0
+
+### Minor Changes
+
+- bump required node version to `20.17` ([2ca375b](https://github.com/ryanatkn/svelte-intersect/commit/2ca375b))
+
 ## 0.14.2
 
 ### Patch Changes

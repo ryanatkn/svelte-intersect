@@ -1,6 +1,6 @@
 {
   "name": "svelte-intersect",
-  "version": "0.14.2",
+  "version": "0.15.0",
   "description": "a Svelte action for IntersectionObserver",
   "license": "MIT",
   "glyph": "💠",
