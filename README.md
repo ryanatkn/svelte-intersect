@@ -1,5 +1,7 @@
 # `svelte-intersect`
 
+> ⚠️ deprecated, moved to [`@ryanatkn/fuz/intersect.js`](https://github.com/ryanatkn/fuz)
+
 > a [Svelte action](https://svelte.dev/docs/svelte-action) for
 > [IntersectionObserver](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/IntersectionObserver)
 
